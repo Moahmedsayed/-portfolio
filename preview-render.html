@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Mohamed Sayed — Graphic Designer &amp; Video Editor</title>
+<meta content="Portfolio 2026 — Mohamed Sayed, Graphic Designer &amp; Video Editor specializing in social media design, video editing, motion graphics and print design." name="description"/>
+<meta content="#f7faff" name="theme-color"/>
+<meta content="Mohamed Sayed — Graphic Designer &amp; Video Editor" property="og:title"/>
+<meta content="Social Media Design · Video Editing · Print Design" property="og:description"/>
+<meta content="website" property="og:type"/>
+<style>
+    :root{
+      --bg:#f7f9fc;
+      --paper:#ffffff;
+      --paper-soft:#fbfdff;
+      --text:#263d52;
+      --muted:#718396;
+      --line:#dfe7ef;
+      --line-strong:#d2dde8;
+      --blue:#6f94b3;
+      --blue-dark:#4e718e;
+      --blue-soft:#edf5fb;
+      --shadow:0 12px 38px rgba(63,89,113,.08);
+      --radius:20px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .section{padding:78px 0}
+    .section + .section{border-top:1px solid rgba(210,221,232,.72)}
+    .kicker{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-dark)}
+    .section-title{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:28px}
+    .section-title h2{margin:6px 0 0;font-size:clamp(29px,4vw,44px);line-height:1.12;letter-spacing:-.035em;color:#263f55}
+    .section-title p{margin:0;max-width:520px;color:var(--muted);font-size:13px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:43px;padding:0 17px;border:1px solid var(--line-strong);border-radius:13px;background:var(--paper);color:#3d5870;font-size:12px;font-weight:750;transition:.2s ease}
+    .btn:hover{transform:translateY(-1px);border-color:#b9cad8;box-shadow:0 8px 22px rgba(71,98,122,.08)}
+    .btn.primary{background:#5f839f;border-color:#5f839f;color:white;box-shadow:0 9px 24px rgba(68,105,134,.20)}
+    .btn.primary:hover{background:#527895;border-color:#527895}
+    .icon{width:17px;height:17px;display:block}
+
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(249,251,254,.92);border-bottom:1px solid rgba(215,225,234,.9);backdrop-filter:blur(15px)}
+    .nav{height:76px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
+    .brand{justify-self:start;display:flex;align-items:center;gap:10px;min-width:max-content}
+    .brand-mark{width:42px;height:42px;border:1px solid var(--line-strong);border-radius:13px;background:white;display:grid;place-items:center;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(72,98,122,.06)}
+    .brand-mark img{width:100%;height:100%;object-fit:contain}
+    .brand-fallback{position:absolute;inset:0;display:grid;place-items:center;font-weight:900;color:#557791;font-size:16px}
+    .brand-copy strong{display:block;font-size:13px;line-height:1.15;color:#2b4358}
+    .brand-copy small{display:block;font-size:9px;color:#8796a4;margin-top:3px;letter-spacing:.02em}
+    .nav-links{display:flex;align-items:center;justify-content:center;gap:3px}
+    .nav-links a{padding:8px 10px;border-radius:9px;font-size:12px;color:#53697c;transition:.18s ease}
+    .nav-links a:hover{background:#eef4f8;color:#29465d}
+    .nav-actions{justify-self:end;display:flex;align-items:center;gap:8px}
+    .menu-btn{display:none;width:43px;height:43px;border-radius:12px;border:1px solid var(--line);background:white;color:#456076}
+    .mobile-menu{display:none}
+
+    /* Hero */
+    .hero{padding:66px 0 54px;background:
+      radial-gradient(circle at 76% 33%,rgba(221,235,246,.9),transparent 27%),
+      linear-gradient(180deg,#fbfdff 0%,#f7f9fc 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:58px;align-items:center}
+    .hero-copy h1{font-size:clamp(48px,6.3vw,82px);line-height:.98;letter-spacing:-.055em;margin:13px 0 20px;color:#294158}
+    .hero-copy h1 span{color:#7699b7}
+    .hero-copy>p{margin:0 0 23px;color:#6d7f90;font-size:14px;max-width:610px}
+    .hero-actions{display:flex;gap:9px;flex-wrap:wrap}
+    .hero-note{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px;padding-top:19px;border-top:1px solid var(--line)}
+    .note-item{display:flex;gap:9px;align-items:center;color:#63778a;font-size:11px}
+    .note-dot{width:7px;height:7px;border-radius:50%;background:#7db393;box-shadow:0 0 0 4px #edf7f0}
+
+    .hero-art{position:relative;min-height:480px}
+    .hero-panel{position:absolute;inset:10px 0 0 24px;border:1px solid #dbe5ee;border-radius:28px;background:rgba(255,255,255,.78);box-shadow:0 28px 70px rgba(82,108,133,.10);overflow:hidden}
+    .hero-panel:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(239,246,252,.58));z-index:0}
+    .hero-image{position:absolute;inset:22px 22px 92px 22px;border-radius:20px;overflow:hidden;background:#edf2f6;z-index:1}
+    .hero-image img{width:100%;height:100%;object-fit:cover}
+    .hero-bottom{position:absolute;z-index:2;left:22px;right:22px;bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .hero-bottom strong{font-size:13px;color:#2d465c}.hero-bottom span{font-size:10px;color:#8393a2;display:block;margin-top:2px}
+    .tool-row{display:flex;gap:7px}
+    .tool{width:38px;height:38px;border-radius:11px;border:1px solid #dce5ed;background:white;display:grid;place-items:center;font-size:10px;font-weight:850;color:#5c7890;box-shadow:0 5px 15px rgba(72,100,126,.06)}
+    .float-card{position:absolute;z-index:3;background:rgba(255,255,255,.92);border:1px solid #dae4ed;border-radius:15px;padding:12px 14px;box-shadow:var(--shadow)}
+    .float-card.one{top:0;left:0}.float-card.two{right:0;bottom:45px}
+    .float-card strong{display:block;font-size:19px;line-height:1.1;color:#335068}.float-card span{font-size:9px;color:#8594a1}
+
+    /* Compact stats */
+    .stats{background:white;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+    .stat{padding:23px 28px;text-align:center;border-inline-start:1px solid var(--line)}
+    .stat:first-child{border-inline-start:0}
+    .stat strong{font-size:25px;line-height:1;color:#557893;display:block}.stat span{font-size:10px;color:#81909f;display:block;margin-top:6px}
+
+    /* Category cards like reference */
+    .category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .category-card{border:1px solid var(--line);border-radius:18px;background:white;padding:18px;box-shadow:0 10px 27px rgba(63,88,112,.045)}
+    .category-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px}.category-head h3{margin:0;font-size:15px;color:#36536b}.category-icon{width:31px;height:31px;border-radius:10px;background:var(--blue-soft);display:grid;place-items:center;color:#6388a6;font-weight:850}
+    .category-list{border:1px solid #e6edf3;border-radius:13px;background:#fbfdff;overflow:hidden}
+    .category-list div{display:flex;justify-content:space-between;align-items:center;padding:8px 11px;font-size:10px;color:#536a7e;border-bottom:1px solid #e9eff4}.category-list div:last-child{border-bottom:0}.category-list b{color:#8ca0b1;font-weight:600}
+
+    /* Work */
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .work-card{border:1px solid var(--line);background:white;border-radius:18px;overflow:hidden;transition:.2s ease}
+    .work-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+    .work-media{aspect-ratio:4/3;background:#edf2f6;overflow:hidden}.work-media img{width:100%;height:100%;object-fit:cover}
+    .work-body{padding:15px 16px 17px}.work-body small{font-size:9px;color:#8197aa;font-weight:800;letter-spacing:.08em}.work-body h3{font-size:16px;margin:5px 0 5px;color:#304b62}.work-body p{margin:0;color:#7a8997;font-size:10.5px;line-height:1.65}.work-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:12px}.work-tags span{font-size:8.5px;padding:5px 7px;border-radius:7px;background:#f4f8fb;border:1px solid #e4ebf1;color:#71889b}
+
+    /* Services */
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .service{border:1px solid var(--line);background:white;border-radius:18px;padding:21px;min-height:245px}.service-num{font-size:10px;color:#86a0b5;font-weight:800}.service h3{font-size:20px;margin:26px 0 8px;color:#36536a}.service p{font-size:11px;color:#7b8a98;margin:0 0 13px}.service ul{margin:0;padding:0 17px 0 0;color:#5e7284;font-size:10px;line-height:1.9}
+
+    /* Video */
+    .toolbar{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}.filter{border:1px solid var(--line);background:white;color:#6d8193;border-radius:10px;padding:7px 11px;font-size:10px}.filter.active{background:#5d829f;color:white;border-color:#5d829f}
+    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.video-card{border:1px solid var(--line);border-radius:18px;background:white;overflow:hidden}.video-frame{aspect-ratio:16/9;background:#eaf0f5}.video-frame.vertical{aspect-ratio:9/16}.video-frame iframe{width:100%;height:100%;border:0}.video-meta{padding:11px 13px}.video-meta strong{display:block;font-size:10.5px;color:#456178}.video-meta span{font-size:8.5px;color:#8b98a5}.video-card.hidden{display:none}
+
+    /* Experience */
+    .experience-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 30px;border-top:1px solid var(--line)}
+    .job{display:grid;grid-template-columns:76px 1fr;gap:13px;padding:18px 0;border-bottom:1px solid var(--line)}.job time{font-size:10px;color:#809caf;font-weight:800}.job h3{font-size:14px;margin:0 0 2px;color:#36536a}.job .role{font-size:9px;color:#7d8d9b;margin-bottom:4px}.job p{margin:0;font-size:9.5px;color:#8895a1}
+
+    /* About */
+    .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:15px}.about-card{border:1px solid var(--line);border-radius:18px;background:white;padding:22px}.about-card h3{font-size:18px;margin:0 0 9px;color:#36536a}.about-card p{font-size:11px;color:#748596;margin:0}.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:15px}.chip{font-size:8.5px;padding:6px 8px;border-radius:8px;background:#f5f9fc;border:1px solid #e2eaf1;color:#6f8597}.software{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}.soft{border:1px solid #e4ebf1;background:#fbfdff;border-radius:11px;padding:9px;display:flex;align-items:center;gap:7px}.soft b{width:27px;height:27px;display:grid;place-items:center;border-radius:8px;background:#edf4f9;font-size:9px;color:#587c98}.soft span{font-size:8.5px;color:#657b8e}
+
+    /* Contact */
+    .contact-box{border:1px solid #d9e4ed;border-radius:22px;background:linear-gradient(135deg,#ffffff,#f4f8fc);padding:27px;display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;box-shadow:0 13px 38px rgba(68,94,119,.06)}
+    .contact-copy h2{font-size:clamp(29px,4vw,43px);line-height:1.07;margin:7px 0 12px;color:#324e66}.contact-copy p{font-size:11px;color:#788998}.contact-list{display:grid;gap:8px;margin-top:18px}.contact-item{border:1px solid #e1e9f0;background:white;border-radius:12px;min-height:43px;padding:7px 10px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:9.5px;color:#5e7487}.contact-item b{font-size:9.5px;color:#456178;word-break:break-word}.contact-icon{width:28px;height:28px;border-radius:9px;background:#f1f6fa;display:grid;place-items:center;color:#6287a3}.contact-icon svg{width:14px;height:14px}
+    form{display:grid;gap:10px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}label{font-size:9px;color:#6d8092;display:block;margin-bottom:4px}input,select,textarea{width:100%;border:1px solid #dce6ee;border-radius:11px;background:white;color:#344f66;padding:10px 11px;outline:none;font-size:10.5px}input:focus,select:focus,textarea:focus{border-color:#9eb8cd;box-shadow:0 0 0 3px #edf4f9}textarea{resize:vertical;min-height:100px}.form-note{margin:0;font-size:8.5px;color:#8c99a4}
+
+    /* Footer */
+    footer{padding:24px 0 28px;border-top:1px solid var(--line);background:#fafcff}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:9px;color:#8a98a4}.socials{display:flex;gap:7px}.social-link{width:34px;height:34px;border:1px solid #e0e8ef;border-radius:10px;background:white;display:grid;place-items:center;color:#627f96}.social-link svg{width:15px;height:15px}.social-link:hover{color:#456e8f;background:#f3f8fb}
+    .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,10px);opacity:0;pointer-events:none;transition:.2s;background:#314c62;color:white;border-radius:999px;padding:8px 12px;font-size:9px;z-index:120}.toast.show{opacity:1;transform:translate(-50%,0)}
+
+    @media(max-width:980px){
+      .nav{grid-template-columns:auto 1fr auto}.nav-links{display:none}.menu-btn{display:grid;place-items:center}.nav-actions .btn{display:none}.mobile-menu{position:fixed;top:76px;left:16px;right:16px;background:white;border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow);padding:8px;z-index:70}.mobile-menu.open{display:grid}.mobile-menu a{padding:10px 12px;border-radius:9px;font-size:11px;color:#4f667a}.mobile-menu a:hover{background:#f1f6fa}
+      .hero-grid{grid-template-columns:1fr}.hero-art{min-height:440px}.category-grid,.work-grid,.service-grid{grid-template-columns:1fr 1fr}.video-grid{grid-template-columns:1fr 1fr}.about-grid,.contact-box{grid-template-columns:1fr}.experience-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .container{width:min(var(--max),calc(100% - 24px))}.section{padding:58px 0}.hero{padding-top:42px}.hero-copy h1{font-size:46px}.hero-art{min-height:360px}.hero-panel{inset:8px 0 0 12px}.float-card{padding:10px 11px}.float-card strong{font-size:15px}.hero-bottom{left:15px;right:15px}.category-grid,.work-grid,.service-grid,.video-grid{grid-template-columns:1fr}.section-title{display:block}.section-title p{margin-top:12px}.stats-grid{grid-template-columns:1fr}.stat{border-inline-start:0;border-top:1px solid var(--line)}.stat:first-child{border-top:0}.form-grid{grid-template-columns:1fr}.software{grid-template-columns:1fr 1fr}.footer-row{flex-direction:column;align-items:flex-start}.brand-copy small{display:none}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+<div class="container nav">
+<a aria-label="العودة إلى البداية" class="brand" href="#top">
+<span class="brand-mark"><img alt="Logo" id="brandLogo" src="assets/site-logo.png"/><span class="brand-fallback" id="brandFallback">MS</span></span>
+<span class="brand-copy"><strong>Mohamed Sayed</strong><small>Graphic Designer &amp; Video Editor</small></span>
+</a>
+<nav aria-label="التنقل الرئيسي" class="nav-links">
+<a href="#top">الرئيسية</a>
+<a href="#work">الأعمال</a>
+<a href="#services">الخدمات</a>
+<a href="#video">الفيديو</a>
+<a href="#experience">الخبرات</a>
+<a href="#contact">تواصل</a>
+</nav>
+<div class="nav-actions">
+<button class="btn" id="shareSite" type="button">مشاركة الموقع</button>
+<a class="btn" href="https://drive.google.com/drive/folders/19IOL5jspgsPImomRC1mdSiCic5oX4vcw?usp=drive_link" rel="noopener" target="_blank">
+<svg aria-hidden="true" class="icon" fill="none" viewbox="0 0 24 24"><path d="M8.6 3.8h6.8l5.2 9-3.4 5.9H6.8l-3.4-5.9 5.2-9Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path><path d="M8.6 3.8 12 9.7m3.4-5.9L12 9.7m8.6 3.1H13.8m-10.4 0h6.8m6.9 5.9-3.3-5.9m-7 5.9 3.4-5.9" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg>
+        Drive Portfolio
+      </a>
+<a class="btn primary" href="https://wa.me/201111687422" rel="noopener" target="_blank">ابدأ مشروعك</a>
+<button aria-label="فتح القائمة" class="menu-btn" id="menuBtn" type="button">☰</button>
+</div>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="#top">الرئيسية</a><a href="#work">الأعمال</a><a href="#services">الخدمات</a><a href="#video">الفيديو</a><a href="#experience">الخبرات</a><a href="#contact">تواصل</a>
+<a href="https://drive.google.com/drive/folders/19IOL5jspgsPImomRC1mdSiCic5oX4vcw?usp=drive_link" rel="noopener" target="_blank">Drive Portfolio</a>
+</div>
+</header>
+<main id="top">
+<section class="hero">
+<div class="container hero-grid">
+<div class="hero-copy">
+<span class="kicker">Portfolio 2026</span>
+<h1>محتوى بصري<br/>واضح، بسيط،<br/><span>ويترك أثرًا.</span></h1>
+<p>أنا محمد سيد — Graphic Designer &amp; Video Editor بخبرة أكثر من 5 سنوات في تصميم السوشيال ميديا، المونتاج، الموشن جرافيك والتصميمات المطبوعة.</p>
+<div class="hero-actions">
+<a class="btn primary" href="#work">شاهد الأعمال</a>
+<a class="btn" href="https://wa.me/201111687422" rel="noopener" target="_blank">تواصل واتساب</a>
+</div>
+<div class="hero-note">
+<span class="note-item"><i class="note-dot"></i> متاح Remote · Freelance · Part-Time</span>
+<span class="note-item">Egypt · Gulf · International</span>
+<span class="note-item">Asyut, Egypt</span>
+</div>
+</div>
+<div aria-label="نماذج من أعمال محمد سيد" class="hero-art">
+<div class="hero-panel">
+<div class="hero-image"><img alt="Selected design work" src="assets/education-showcase.jpg"/></div>
+<div class="hero-bottom">
+<div><strong>Selected Work</strong><span>Graphic Design · Video Editing</span></div>
+<div class="tool-row"><span class="tool">Ps</span><span class="tool">Ai</span><span class="tool">Pr</span><span class="tool">Ae</span></div>
+</div>
+</div>
+<div class="float-card one"><strong>5+ Years</strong><span>Experience</span></div>
+<div class="float-card two"><strong>52 / month</strong><span>Video production capacity</span></div>
+</div>
+</div>
+</section>
+<section class="stats">
+<div class="container stats-grid">
+<div class="stat"><strong>5+</strong><span>سنوات خبرة</span></div>
+<div class="stat"><strong>52</strong><span>فيديو تقريبًا شهريًا ضمن EHUNT</span></div>
+<div class="stat"><strong>50+</strong><span>مشروع تصميم وفيديو ضمن TPS</span></div>
+</div>
+</section>
+<section class="section" id="services">
+<div class="container">
+<div class="section-title"><div><span class="kicker">What I Do</span><h2>الخدمات الأساسية</h2></div><p>نفس فكرة الريفرنس: عرض مباشر وبسيط للخدمات بدون ازدحام بصري أو نصوص طويلة.</p></div>
+<div class="category-grid">
+<article class="category-card"><div class="category-head"><h3>Social Media Design</h3><span class="category-icon">✦</span></div><div class="category-list"><div>Promotional Posts <b>01</b></div><div>Campaigns &amp; Carousels <b>02</b></div><div>Stories &amp; Vertical Content <b>03</b></div></div></article>
+<article class="category-card"><div class="category-head"><h3>Video Editing</h3><span class="category-icon">▶</span></div><div class="category-list"><div>Reels &amp; Short-form <b>01</b></div><div>YouTube &amp; Promotional <b>02</b></div><div>Motion &amp; Sound Design <b>03</b></div></div></article>
+<article class="category-card"><div class="category-head"><h3>Print Design</h3><span class="category-icon">▦</span></div><div class="category-list"><div>Posters &amp; Flyers <b>01</b></div><div>Brochures &amp; Cards <b>02</b></div><div>Banners &amp; Materials <b>03</b></div></div></article>
+</div>
+</div>
+</section>
+<section class="section" id="work">
+<div class="container">
+<div class="section-title"><div><span class="kicker">Selected Projects</span><h2>أعمال مختارة</h2></div><p>مشروعات مختارة توضح تنوع القطاعات واتجاه التصميم، مع ترك المساحة الأكبر للعمل نفسه.</p></div>
+<div class="work-grid">
+<article class="work-card"><div class="work-media"><img alt="Bin Wazir Automotive" src="assets/automotive-showcase.jpg"/></div><div class="work-body"><small>AUTOMOTIVE · SOCIAL MEDIA</small><h3>Bin Wazir Automotive</h3><p>تصميم محتوى ترويجي للموديلات والعروض والأسعار بصورة واضحة وسهلة القراءة.</p><div class="work-tags"><span>Photoshop</span><span>Social Media</span><span>Automotive</span></div></div></article>
+<article class="work-card"><div class="work-media"><img alt="Fursan Al-Karak Academy" src="assets/education-showcase.jpg"/></div><div class="work-body"><small>EDUCATION · CONTENT PLAN</small><h3>Fursan Al-Karak Academy</h3><p>خطة محتوى شهرية وتصميمات عربية تعليمية بهوية بصرية متماسكة.</p><div class="work-tags"><span>Education</span><span>Content Plan</span><span>Photoshop</span></div></div></article>
+<article class="work-card"><div class="work-media"><img alt="Selected Social Designs" src="assets/misc-showcase.jpg"/></div><div class="work-body"><small>MULTI-INDUSTRY · DESIGN</small><h3>Selected Social Designs</h3><p>نماذج متنوعة من القطاع الطبي والأغذية توضح المرونة في الأسلوب والهوية.</p><div class="work-tags"><span>Dental</span><span>Food</span><span>Social Media</span></div></div></article>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-title"><div><span class="kicker">Services</span><h2>التنفيذ من الفكرة للنشر</h2></div><p>تفاصيل الخدمة موجودة لكن بصياغة مختصرة حتى يظل الموقع Minimal وسهل التصفح.</p></div>
+<div class="service-grid">
+<article class="service"><span class="service-num">01 · DESIGN</span><h3>Social Media Design</h3><p>محتوى بصري يدعم الحملة ويحافظ على اتساق البراند.</p><ul><li>Promotional posts &amp; campaigns</li><li>Carousel designs</li><li>Stories and vertical content</li><li>Product &amp; service presentations</li></ul></article>
+<article class="service"><span class="service-num">02 · VIDEO</span><h3>Video Editing</h3><p>مونتاج متكامل مع إيقاع واضح ومخرجات جاهزة لكل منصة.</p><ul><li>Reels &amp; short-form videos</li><li>YouTube &amp; promotional content</li><li>Text animation &amp; motion graphics</li><li>Sound design &amp; basic color correction</li></ul></article>
+<article class="service"><span class="service-num">03 · PRINT</span><h3>Print Design</h3><p>مواد مطبوعة بسيطة وواضحة ومتوافقة مع هوية العميل.</p><ul><li>Posters &amp; flyers</li><li>Brochures</li><li>Business cards</li><li>Banners &amp; promotional materials</li></ul></article>
+</div>
+</div>
+</section>
+<section class="section" id="video">
+<div class="container">
+<div class="section-title"><div><span class="kicker">Video Editing</span><h2>Selected Video Work</h2></div><p>إعلانات، Reels، محتوى شركات ويوتيوب مع مونتاج، Motion Graphics وSound Design.</p></div>
+<div class="toolbar"><button class="filter active" data-filter="all">الكل</button><button class="filter" data-filter="reels">Reels</button><button class="filter" data-filter="youtube">YouTube</button><button class="filter" data-filter="video">Projects</button></div>
+<div class="video-grid">
+<article class="video-card" data-category="reels"><div class="video-frame vertical"><div style="width:100%;height:100%;display:grid;place-items:center;background:#eef3f7;color:#7b8d9d;font:600 12px Segoe UI,Arial">Video Preview</div></div><div class="video-meta"><strong>Social Media Reel</strong><span>Editing · Motion</span></div></article>
+<article class="video-card" data-category="reels"><div class="video-frame vertical"><div style="width:100%;height:100%;display:grid;place-items:center;background:#eef3f7;color:#7b8d9d;font:600 12px Segoe UI,Arial">Video Preview</div></div><div class="video-meta"><strong>Short-form Content</strong><span>Editing · Text</span></div></article>
+<article class="video-card" data-category="reels"><div class="video-frame vertical"><div style="width:100%;height:100%;display:grid;place-items:center;background:#eef3f7;color:#7b8d9d;font:600 12px Segoe UI,Arial">Video Preview</div></div><div class="video-meta"><strong>Promotional Reel</strong><span>Post Production</span></div></article>
+<article class="video-card" data-category="youtube"><div class="video-frame"><div style="width:100%;height:100%;display:grid;place-items:center;background:#eef3f7;color:#7b8d9d;font:600 12px Segoe UI,Arial">Video Preview</div></div><div class="video-meta"><strong>YouTube Project</strong><span>Editing · Storytelling</span></div></article>
+<article class="video-card" data-category="youtube"><div class="video-frame"><div style="width:100%;height:100%;display:grid;place-items:center;background:#eef3f7;color:#7b8d9d;font:600 12px Segoe UI,Arial">Video Preview</div></div><div class="video-meta"><strong>YouTube Project</strong><span>Editing · Graphics</span></div></article>
+<article class="video-card" data-category="video"><div class="video-frame"><div style="width:100%;height:100%;display:grid;place-items:center;background:#eef3f7;color:#7b8d9d;font:600 12px Segoe UI,Arial">Video Preview</div></div><div class="video-meta"><strong>Video Project</strong><span>Post Production</span></div></article>
+</div>
+<div style="text-align:center;margin-top:20px"><a class="btn" href="https://drive.google.com/drive/folders/19IOL5jspgsPImomRC1mdSiCic5oX4vcw?usp=drive_link" rel="noopener" target="_blank">عرض Drive Portfolio كامل</a></div>
+</div>
+</section>
+<section class="section" id="experience">
+<div class="container">
+<div class="section-title"><div><span class="kicker">Experience</span><h2>الخبرة المهنية</h2></div><p>أبرز التجارب المهنية في التصميم والمونتاج وإدارة إنتاج الفيديو.</p></div>
+<div class="experience-grid">
+<article class="job"><time>2025–2026</time><div><h3>EHUNT</h3><div class="role">Video Editor · Remote</div><p>Advertisements, product videos, corporate content and high-volume post-production.</p></div></article>
+<article class="job"><time>2026</time><div><h3>Next Update</h3><div class="role">Graphic Designer · Video Editor</div><p>Ads, Reels, product presentations and corporate marketing content.</p></div></article>
+<article class="job"><time>2025</time><div><h3>Smarketing Agency</h3><div class="role">Motion Graphics Designer · Video Editor</div><p>Motion Graphics and campaign content for digital advertising.</p></div></article>
+<article class="job"><time>2024</time><div><h3>Nextera</h3><div class="role">Graphic Designer · Motion Graphics · Video Editor</div><p>Marketing visuals, motion graphics and edited content aligned with campaigns.</p></div></article>
+<article class="job"><time>2023</time><div><h3>Rawaj</h3><div class="role">Graphic Designer · Motion Graphics · Video Editor</div><p>Social media design, marketing visuals and promotional video content.</p></div></article>
+<article class="job"><time>2018–2020</time><div><h3>TPS</h3><div class="role">Graphic Designer · Motion Graphics · Video Editor</div><p>50+ design and video projects including automotive marketing content.</p></div></article>
+</div>
+</div>
+</section>
+<section class="section" id="about">
+<div class="container">
+<div class="section-title"><div><span class="kicker">About</span><h2>تصميم واضح. محتوى له هدف.</h2></div><p>التركيز الأساسي هو توصيل الرسالة بطريقة مرتبة ومناسبة للبراند والمنصة.</p></div>
+<div class="about-grid">
+<article class="about-card"><h3>About Me</h3><p>Graphic Designer وVideo Editor بخبرة أكثر من 5 سنوات مع شركات تسويق ووكالات إعلان وعملاء عن بُعد ومشروعات Freelance. أتخصص في Social Media Design، Video Editing وPrint Design.</p><div class="chips"><span class="chip">Remote</span><span class="chip">Freelance</span><span class="chip">Part-Time</span><span class="chip">Egypt</span><span class="chip">Gulf Region</span><span class="chip">International</span></div></article>
+<article class="about-card"><h3>Core Software</h3><p>الأدوات الأساسية المستخدمة في التصميم والمونتاج والموشن.</p><div class="software"><div class="soft"><b>Ps</b><span>Photoshop</span></div><div class="soft"><b>Ai</b><span>Illustrator</span></div><div class="soft"><b>Pr</b><span>Premiere Pro</span></div><div class="soft"><b>Ae</b><span>After Effects</span></div><div class="soft"><b>Cc</b><span>CapCut</span></div><div class="soft"><b>AI</b><span>ChatGPT</span></div></div></article>
+</div>
+</div>
+</section>
+<section class="section" id="contact">
+<div class="container contact-box">
+<div class="contact-copy">
+<span class="kicker">Let's Work Together</span>
+<h2>هل لديك مشروع؟<br/>خلّينا نبدأ.</h2>
+<p>أرسل Brief سريع عن نوع المحتوى والمنصة والمدة، وسيتم تجهيز رسالة واتساب تلقائيًا.</p>
+<div class="contact-list">
+<a class="contact-item" href="https://wa.me/201111687422" rel="noopener" target="_blank"><span aria-label="WhatsApp" class="contact-icon"><svg fill="currentColor" viewbox="0 0 32 32"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.275.623 4.395 1.71 6.233L4 29l7.01-1.84A11.9 11.9 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3m0 2.4c5.302 0 9.6 4.298 9.6 9.6 0 5.303-4.298 9.6-9.6 9.6-1.95 0-3.768-.588-5.326-1.7l-.38-.258-4.153 1.09 1.11-4.048-.248-.416A9.52 9.52 0 0 1 6.4 15c0-5.302 4.298-9.6 9.6-9.6"></path></svg></span><b dir="ltr">+20 111 168 7422</b></a>
+<a class="contact-item" href="mailto:mohamedsayedmohamed@yahoo.com"><span aria-label="Email" class="contact-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="3" width="18" x="3" y="5"></rect><path d="m4.5 7.5 7.5 6 7.5-6"></path></svg></span><b>mohamedsayedmohamed@yahoo.com</b></a>
+<a class="contact-item" href="https://www.instagram.com/mohamedsayed5156" rel="noopener" target="_blank"><span aria-label="Instagram" class="contact-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r=".9" stroke="none"></circle></svg></span><b>@mohamedsayed5156</b></a>
+</div>
+</div>
+<form id="contactForm">
+<div class="form-grid"><div><label for="name">الاسم</label><input id="name" name="name" placeholder="اسمك أو اسم الشركة"/></div><div><label for="service">الخدمة</label><select id="service" name="service"><option value="">اختر الخدمة</option><option>Social Media Design</option><option>Video Editing</option><option>Motion Graphics</option><option>Print Design</option></select></div></div>
+<div class="form-grid"><div><label for="platform">المنصة</label><select id="platform" name="platform"><option value="">اختر المنصة</option><option>Instagram / Reels</option><option>TikTok / Shorts</option><option>YouTube</option><option>Facebook</option><option>Advertising Campaign</option><option>Other</option></select></div><div><label for="deadline">Deadline</label><input id="deadline" name="deadline" placeholder="مثال: خلال 3 أيام"/></div></div>
+<div><label for="reference">Reference Link — اختياري</label><input dir="ltr" id="reference" name="reference" placeholder="https://..." type="url"/></div>
+<div><label for="details">تفاصيل المشروع</label><textarea id="details" name="details" placeholder="نوع الفيديو أو التصميم، المدة/العدد، المطلوب تنفيذه، وأي ملاحظات مهمة..."></textarea></div>
+<button class="btn primary" type="submit">إرسال الـBrief على واتساب</button>
+<p class="form-note">النموذج لا يرسل البيانات إلى خادم؛ هو فقط يجهز رسالة واتساب.</p>
+</form>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-row">
+<span>© <span id="year"></span> Mohamed Sayed · Graphic Designer &amp; Video Editor</span>
+<div class="socials">
+<a aria-label="Email" class="social-link" href="mailto:mohamedsayedmohamed@yahoo.com"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="3" width="18" x="3" y="5"></rect><path d="m4.5 7.5 7.5 6 7.5-6"></path></svg></a>
+<a aria-label="Instagram" class="social-link" href="https://www.instagram.com/mohamedsayed5156" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r=".9" stroke="none"></circle></svg></a>
+<a aria-label="WhatsApp" class="social-link" href="https://wa.me/201111687422" rel="noopener" target="_blank"><svg fill="currentColor" viewbox="0 0 32 32"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.275.623 4.395 1.71 6.233L4 29l7.01-1.84A11.9 11.9 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3m0 2.4c5.302 0 9.6 4.298 9.6 9.6 0 5.303-4.298 9.6-9.6 9.6-1.95 0-3.768-.588-5.326-1.7l-.38-.258-4.153 1.09 1.11-4.048-.248-.416A9.52 9.52 0 0 1 6.4 15c0-5.302 4.298-9.6 9.6-9.6"></path></svg></a>
+</div>
+</div>
+</footer>
+<div class="toast" id="toast">تم نسخ رابط الموقع</div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Logo fallback: the uploaded logo file is currently very dark/blank,
+  // so keep a clean MS monogram until a visible logo asset is supplied.
+  const brandLogo = document.getElementById('brandLogo');
+  const brandFallback = document.getElementById('brandFallback');
+  function evaluateLogo(){
+    if(!brandLogo || !brandLogo.complete || !brandLogo.naturalWidth) return;
+    try{
+      const c=document.createElement('canvas');c.width=24;c.height=24;
+      const x=c.getContext('2d',{willReadFrequently:true});x.drawImage(brandLogo,0,0,24,24);
+      const d=x.getImageData(0,0,24,24).data;let v=0,dark=0;
+      for(let i=0;i<d.length;i+=4){if(d[i+3]>20){v++;if((d[i]+d[i+1]+d[i+2])/3<12)dark++;}}
+      if(!v || dark/v>.96){brandLogo.style.display='none';brandFallback.style.display='grid';}else{brandFallback.style.display='none';}
+    }catch(e){brandFallback.style.display='grid';}
+  }
+  brandLogo.addEventListener('load',evaluateLogo);if(brandLogo.complete)evaluateLogo();
+
+  const menuBtn=document.getElementById('menuBtn');
+  const mobileMenu=document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('open'));
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
+
+  const filters=document.querySelectorAll('.filter');
+  const videos=document.querySelectorAll('.video-card');
+  filters.forEach(btn=>btn.addEventListener('click',()=>{
+    filters.forEach(x=>x.classList.remove('active'));btn.classList.add('active');
+    const f=btn.dataset.filter;
+    videos.forEach(v=>v.classList.toggle('hidden',f!=='all'&&v.dataset.category!==f));
+  }));
+
+  const toast=document.getElementById('toast');
+  function showToast(text){toast.textContent=text;toast.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>toast.classList.remove('show'),2200);}
+  document.getElementById('shareSite').addEventListener('click',async()=>{
+    const data={title:document.title,text:'Mohamed Sayed — Graphic Designer & Video Editor',url:location.href};
+    if(navigator.share){try{await navigator.share(data)}catch(e){}}
+    else{try{await navigator.clipboard.writeText(location.href);showToast('تم نسخ رابط الموقع')}catch(e){showToast('انسخ الرابط من شريط العنوان')}}
+  });
+
+  document.getElementById('contactForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const f=e.currentTarget;
+    const name=f.name.value.trim();
+    const service=f.service.value;
+    const platform=f.platform.value;
+    const deadline=f.deadline.value.trim();
+    const reference=f.reference.value.trim();
+    const details=f.details.value.trim();
+    let msg='مرحبًا محمد، أريد مناقشة مشروع جديد.';
+    if(name) msg+=`\n\nالاسم / الشركة: ${name}`;
+    if(service) msg+=`\nالخدمة: ${service}`;
+    if(platform) msg+=`\nالمنصة: ${platform}`;
+    if(deadline) msg+=`\nDeadline: ${deadline}`;
+    if(reference) msg+=`\nReference: ${reference}`;
+    if(details) msg+=`\n\nتفاصيل المشروع:\n${details}`;
+    window.open(`https://wa.me/201111687422?text=${encodeURIComponent(msg)}`,'_blank');
+  });
+</script>
+</body>
+</html>

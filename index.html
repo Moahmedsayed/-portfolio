@@ -1,852 +1,395 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>بورتفوليو محمد سيد</title>
-  <meta name="description" content="بورتفوليو لعرض نماذج الأعمال والتواصل عبر الواتساب مع محمد سيد." />
-
-  <!--
-    🔧 إعدادات سريعة للتعديل (لا تحتاج خبرة برمجية كبيرة)
-    1) لتغيير الاسم:
-       - ابحث داخل هذا الملف عن النص "محمد سيد" واستبدله باسمك.
-
-    2) لتغيير رقم الواتساب:
-       - ابحث عن: https://wa.me/201111687422
-       - وابحث أيضًا عن: +201111687422
-       - استبدلهما بالرابط والرقم الخاصين بك.
-
-    3) لتغيير حساب إنستجرام:
-       - ابحث عن: https://www.instagram.com/mohamedsayed5156
-       - استبدله بحسابك.
-
-    يمكنك فتح الملف ببرنامج بسيط مثل:
-    - Notepad على ويندوز
-    - TextEdit على ماك (مع تفعيل وضع النص العادي)
-    - أو VS Code (مستحسن وأسهل في البحث)
-  -->
-
-  <!-- وسوم لمساعدة مشاركة الموقع على الشبكات الاجتماعية -->
-  <meta property="og:title" content="بورتفوليو مونتير فيديو - محمد سيد" />
-  <meta property="og:description" content="شاهد أعمال المونتاج وتواصل عبر الواتساب مع محمد سيد." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mohamed Sayed — Graphic Designer & Video Editor</title>
+  <meta name="description" content="Portfolio 2026 — Mohamed Sayed, Graphic Designer & Video Editor specializing in social media design, video editing, motion graphics and print design." />
+  <meta name="theme-color" content="#f7faff" />
+  <meta property="og:title" content="Mohamed Sayed — Graphic Designer & Video Editor" />
+  <meta property="og:description" content="Social Media Design · Video Editing · Print Design" />
   <meta property="og:type" content="website" />
-  <!-- عدّل رابط الموقع هنا بعد رفعه إن أحببت -->
-  <meta property="og:url" content="" />
-
-  <!-- Tailwind CSS v4 (Browser CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
   <style>
-    html {
-      scroll-behavior: smooth;
+    :root{
+      --bg:#f7f9fc;
+      --paper:#ffffff;
+      --paper-soft:#fbfdff;
+      --text:#263d52;
+      --muted:#718396;
+      --line:#dfe7ef;
+      --line-strong:#d2dde8;
+      --blue:#6f94b3;
+      --blue-dark:#4e718e;
+      --blue-soft:#edf5fb;
+      --shadow:0 12px 38px rgba(63,89,113,.08);
+      --radius:20px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .section{padding:78px 0}
+    .section + .section{border-top:1px solid rgba(210,221,232,.72)}
+    .kicker{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-dark)}
+    .section-title{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:28px}
+    .section-title h2{margin:6px 0 0;font-size:clamp(29px,4vw,44px);line-height:1.12;letter-spacing:-.035em;color:#263f55}
+    .section-title p{margin:0;max-width:520px;color:var(--muted);font-size:13px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:43px;padding:0 17px;border:1px solid var(--line-strong);border-radius:13px;background:var(--paper);color:#3d5870;font-size:12px;font-weight:750;transition:.2s ease}
+    .btn:hover{transform:translateY(-1px);border-color:#b9cad8;box-shadow:0 8px 22px rgba(71,98,122,.08)}
+    .btn.primary{background:#5f839f;border-color:#5f839f;color:white;box-shadow:0 9px 24px rgba(68,105,134,.20)}
+    .btn.primary:hover{background:#527895;border-color:#527895}
+    .icon{width:17px;height:17px;display:block}
+
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(249,251,254,.92);border-bottom:1px solid rgba(215,225,234,.9);backdrop-filter:blur(15px)}
+    .nav{height:76px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
+    .brand{justify-self:start;display:flex;align-items:center;gap:12px;min-width:max-content}
+    .brand-mark{width:58px;height:40px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+    .brand-mark img{width:100%;height:100%;object-fit:contain;display:block}
+    .brand-copy strong{display:block;font-size:13px;line-height:1.15;color:#2b4358}
+    .brand-copy small{display:block;font-size:9px;color:#8796a4;margin-top:3px;letter-spacing:.02em}
+    .nav-links{display:flex;align-items:center;justify-content:center;gap:3px}
+    .nav-links a{padding:8px 10px;border-radius:9px;font-size:12px;color:#53697c;transition:.18s ease}
+    .nav-links a:hover{background:#eef4f8;color:#29465d}
+    .nav-actions{justify-self:end;display:flex;align-items:center;gap:8px}
+    .menu-btn{display:none;width:43px;height:43px;border-radius:12px;border:1px solid var(--line);background:white;color:#456076}
+    .mobile-menu{display:none}
+
+    /* Hero */
+    .hero{padding:66px 0 54px;background:
+      radial-gradient(circle at 76% 33%,rgba(221,235,246,.9),transparent 27%),
+      linear-gradient(180deg,#fbfdff 0%,#f7f9fc 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:58px;align-items:center}
+    .hero-copy h1{font-size:clamp(42px,5.15vw,68px);line-height:1.08;letter-spacing:-.04em;margin:14px 0 20px;color:#294158;font-weight:800;max-width:680px;text-wrap:balance}
+    .hero-copy h1 .hero-line{display:block}
+    .hero-copy h1 .hero-line + .hero-line{margin-top:3px}
+    .hero-copy h1 .accent{color:#7699b7}
+    .hero-copy>p{margin:0 0 23px;color:#6d7f90;font-size:14px;max-width:610px}
+    .hero-actions{display:flex;gap:9px;flex-wrap:wrap}
+    .hero-note{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px;padding-top:19px;border-top:1px solid var(--line)}
+    .note-item{display:flex;gap:9px;align-items:center;color:#63778a;font-size:11px}
+    .note-dot{width:7px;height:7px;border-radius:50%;background:#7db393;box-shadow:0 0 0 4px #edf7f0}
+
+    .hero-art{position:relative;min-height:480px}
+    .hero-panel{position:absolute;inset:10px 0 0 24px;border:1px solid #dbe5ee;border-radius:28px;background:rgba(255,255,255,.78);box-shadow:0 28px 70px rgba(82,108,133,.10);overflow:hidden}
+    .hero-panel:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(239,246,252,.58));z-index:0}
+    .hero-image{position:absolute;inset:22px 22px 92px 22px;border-radius:20px;overflow:hidden;background:#edf2f6;z-index:1}
+    .hero-image img{width:100%;height:100%;object-fit:cover}
+    .hero-bottom{position:absolute;z-index:2;left:22px;right:22px;bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .hero-bottom strong{font-size:13px;color:#2d465c}.hero-bottom span{font-size:10px;color:#8393a2;display:block;margin-top:2px}
+    .tool-row{display:flex;gap:7px}
+    .tool{width:38px;height:38px;border-radius:11px;border:1px solid #dce5ed;background:white;display:grid;place-items:center;font-size:10px;font-weight:850;color:#5c7890;box-shadow:0 5px 15px rgba(72,100,126,.06)}
+    .float-card{position:absolute;z-index:3;background:rgba(255,255,255,.92);border:1px solid #dae4ed;border-radius:15px;padding:12px 14px;box-shadow:var(--shadow)}
+    .float-card.one{top:0;left:0}.float-card.two{right:0;bottom:45px}
+    .float-card strong{display:block;font-size:19px;line-height:1.1;color:#335068}.float-card span{font-size:9px;color:#8594a1}
+
+    /* Compact stats */
+    .stats{background:white;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+    .stat{padding:23px 28px;text-align:center;border-inline-start:1px solid var(--line)}
+    .stat:first-child{border-inline-start:0}
+    .stat strong{font-size:25px;line-height:1;color:#557893;display:block}.stat span{font-size:10px;color:#81909f;display:block;margin-top:6px}
+
+    /* Category cards like reference */
+    .category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .category-card{border:1px solid var(--line);border-radius:18px;background:white;padding:18px;box-shadow:0 10px 27px rgba(63,88,112,.045)}
+    .category-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px}.category-head h3{margin:0;font-size:15px;color:#36536b}.category-icon{width:31px;height:31px;border-radius:10px;background:var(--blue-soft);display:grid;place-items:center;color:#6388a6;font-weight:850}
+    .category-list{border:1px solid #e6edf3;border-radius:13px;background:#fbfdff;overflow:hidden}
+    .category-list div{display:flex;justify-content:space-between;align-items:center;padding:8px 11px;font-size:10px;color:#536a7e;border-bottom:1px solid #e9eff4}.category-list div:last-child{border-bottom:0}.category-list b{color:#8ca0b1;font-weight:600}
+
+    /* Work */
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .work-card{border:1px solid var(--line);background:white;border-radius:18px;overflow:hidden;transition:.2s ease}
+    .work-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+    .work-media{aspect-ratio:4/3;background:#edf2f6;overflow:hidden}.work-media img{width:100%;height:100%;object-fit:cover}
+    .work-body{padding:15px 16px 17px}.work-body small{font-size:9px;color:#8197aa;font-weight:800;letter-spacing:.08em}.work-body h3{font-size:16px;margin:5px 0 5px;color:#304b62}.work-body p{margin:0;color:#7a8997;font-size:10.5px;line-height:1.65}.work-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:12px}.work-tags span{font-size:8.5px;padding:5px 7px;border-radius:7px;background:#f4f8fb;border:1px solid #e4ebf1;color:#71889b}
+
+    /* Services */
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .service{border:1px solid var(--line);background:white;border-radius:18px;padding:21px;min-height:245px}.service-num{font-size:10px;color:#86a0b5;font-weight:800}.service h3{font-size:20px;margin:26px 0 8px;color:#36536a}.service p{font-size:11px;color:#7b8a98;margin:0 0 13px}.service ul{margin:0;padding:0 17px 0 0;color:#5e7284;font-size:10px;line-height:1.9}
+
+    /* Video */
+    .toolbar{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}.filter{border:1px solid var(--line);background:white;color:#6d8193;border-radius:10px;padding:7px 11px;font-size:10px}.filter.active{background:#5d829f;color:white;border-color:#5d829f}
+    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.video-card{border:1px solid var(--line);border-radius:18px;background:white;overflow:hidden}.video-frame{aspect-ratio:16/9;background:#eaf0f5}.video-frame.vertical{aspect-ratio:9/16}.video-frame iframe,.video-frame img{width:100%;height:100%;border:0}.video-frame img{display:block;object-fit:cover}.video-frame.design{aspect-ratio:4/5;background:#f3f6f8}.video-meta{padding:11px 13px}.video-meta strong{display:block;font-size:10.5px;color:#456178}.video-meta span{font-size:8.5px;color:#8b98a5}.video-card.hidden{display:none}
+
+    /* Experience */
+    .experience-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 30px;border-top:1px solid var(--line)}
+    .job{display:grid;grid-template-columns:76px 1fr;gap:13px;padding:18px 0;border-bottom:1px solid var(--line)}.job time{font-size:10px;color:#809caf;font-weight:800}.job h3{font-size:14px;margin:0 0 2px;color:#36536a}.job .role{font-size:9px;color:#7d8d9b;margin-bottom:4px}.job p{margin:0;font-size:9.5px;color:#8895a1}
+
+    /* About */
+    .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:15px}.about-card{border:1px solid var(--line);border-radius:18px;background:white;padding:22px}.about-card h3{font-size:18px;margin:0 0 9px;color:#36536a}.about-card p{font-size:11px;color:#748596;margin:0}.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:15px}.chip{font-size:8.5px;padding:6px 8px;border-radius:8px;background:#f5f9fc;border:1px solid #e2eaf1;color:#6f8597}.software{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}.soft{border:1px solid #e4ebf1;background:#fbfdff;border-radius:11px;padding:9px;display:flex;align-items:center;gap:7px}.soft b{width:27px;height:27px;display:grid;place-items:center;border-radius:8px;background:#edf4f9;font-size:9px;color:#587c98}.soft span{font-size:8.5px;color:#657b8e}
+
+    /* Contact */
+    .contact-box{border:1px solid #d9e4ed;border-radius:22px;background:linear-gradient(135deg,#ffffff,#f4f8fc);padding:27px;display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;box-shadow:0 13px 38px rgba(68,94,119,.06)}
+    .contact-copy h2{font-size:clamp(29px,4vw,43px);line-height:1.07;margin:7px 0 12px;color:#324e66}.contact-copy p{font-size:11px;color:#788998}.contact-list{display:grid;gap:8px;margin-top:18px}.contact-item{border:1px solid #e1e9f0;background:white;border-radius:12px;min-height:43px;padding:7px 10px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:9.5px;color:#5e7487}.contact-item b{font-size:9.5px;color:#456178;word-break:break-word}.contact-icon{width:28px;height:28px;border-radius:9px;background:#f1f6fa;display:grid;place-items:center;color:#6287a3}.contact-icon svg{width:14px;height:14px}
+    form{display:grid;gap:10px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}label{font-size:9px;color:#6d8092;display:block;margin-bottom:4px}input,select,textarea{width:100%;border:1px solid #dce6ee;border-radius:11px;background:white;color:#344f66;padding:10px 11px;outline:none;font-size:10.5px}input:focus,select:focus,textarea:focus{border-color:#9eb8cd;box-shadow:0 0 0 3px #edf4f9}textarea{resize:vertical;min-height:100px}.form-note{margin:0;font-size:8.5px;color:#8c99a4}
+
+    /* Footer */
+    footer{padding:24px 0 28px;border-top:1px solid var(--line);background:#fafcff}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:9px;color:#8a98a4}.socials{display:flex;gap:7px}.social-link{width:34px;height:34px;border:1px solid #e0e8ef;border-radius:10px;background:white;display:grid;place-items:center;color:#627f96}.social-link svg{width:15px;height:15px}.social-link:hover{color:#456e8f;background:#f3f8fb}
+    .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,10px);opacity:0;pointer-events:none;transition:.2s;background:#314c62;color:white;border-radius:999px;padding:8px 12px;font-size:9px;z-index:120}.toast.show{opacity:1;transform:translate(-50%,0)}
+
+    @media(max-width:980px){
+      .nav{grid-template-columns:auto 1fr auto}.nav-links{display:none}.menu-btn{display:grid;place-items:center}.nav-actions .btn{display:none}.mobile-menu{position:fixed;top:76px;left:16px;right:16px;background:white;border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow);padding:8px;z-index:70}.mobile-menu.open{display:grid}.mobile-menu a{padding:10px 12px;border-radius:9px;font-size:11px;color:#4f667a}.mobile-menu a:hover{background:#f1f6fa}
+      .hero-grid{grid-template-columns:1fr}.hero-art{min-height:440px}.category-grid,.work-grid,.service-grid{grid-template-columns:1fr 1fr}.video-grid{grid-template-columns:1fr 1fr}.about-grid,.contact-box{grid-template-columns:1fr}.experience-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .container{width:min(var(--max),calc(100% - 24px))}.section{padding:58px 0}.hero{padding-top:42px}.hero-copy h1{font-size:40px;line-height:1.12;letter-spacing:-.03em}.brand-mark{width:49px;height:34px}.brand{gap:9px}.hero-art{min-height:360px}.hero-panel{inset:8px 0 0 12px}.float-card{padding:10px 11px}.float-card strong{font-size:15px}.hero-bottom{left:15px;right:15px}.category-grid,.work-grid,.service-grid,.video-grid{grid-template-columns:1fr}.section-title{display:block}.section-title p{margin-top:12px}.stats-grid{grid-template-columns:1fr}.stat{border-inline-start:0;border-top:1px solid var(--line)}.stat:first-child{border-top:0}.form-grid{grid-template-columns:1fr}.software{grid-template-columns:1fr 1fr}.footer-row{flex-direction:column;align-items:flex-start}.brand-copy small{display:none}
     }
   </style>
 </head>
-<body class="bg-neutral-950 text-neutral-100 min-h-screen font-sans">
-  <!-- خلفية متدرجة -->
-  <div class="fixed inset-0 -z-10 bg-gradient-to-br from-neutral-950 via-neutral-900 to-black"></div>
-  <div class="fixed -top-48 -left-40 h-72 w-72 bg-purple-700/20 blur-3xl rounded-full pointer-events-none"></div>
-  <div class="fixed bottom-0 right-0 h-72 w-72 bg-emerald-600/10 blur-3xl rounded-full pointer-events-none"></div>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a href="#top" class="brand" aria-label="العودة إلى البداية">
+      <span class="brand-mark"><img src="assets/site-logo.png" alt="Mohamed Sayed logo"></span>
+      <span class="brand-copy"><strong>Mohamed Sayed</strong><small>Graphic Designer & Video Editor</small></span>
+    </a>
 
-  <!-- شريط علوي -->
-  <header class="sticky top-0 z-30 border-b border-neutral-800/70 bg-black/70 backdrop-blur-md">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      <div class="flex items-center gap-3">
-        <div class="h-9 w-9 rounded-lg bg-gradient-to-br from-purple-500 to-emerald-400 flex items-center justify-center text-xl font-black tracking-tight">
-          M
-        </div>
-        <div>
-          <!-- اسم المونتير - يمكنك تغييره إلى اسمك -->
-          <div class="text-sm font-semibold tracking-wide">محمد سيد</div>
-          <p class="text-xs text-neutral-400">مصمم جرافيك ومحرر فيديو</p>
-        </div>
-      </div>
+    <nav class="nav-links" aria-label="التنقل الرئيسي">
+      <a href="#top">الرئيسية</a>
+      <a href="#work">الأعمال</a>
+      <a href="#services">الخدمات</a>
+      <a href="#video">الفيديو</a>
+      <a href="#experience">الخبرات</a>
+      <a href="#contact">تواصل</a>
+    </nav>
 
-      <nav class="hidden md:flex items-center gap-4 text-sm text-neutral-300">
-        <a href="#portfolio" class="hover:text-white transition-colors">الأعمال</a>
-        <a href="#services" class="hover:text-white transition-colors">الخدمات</a>
-        <a href="#about" class="hover:text-white transition-colors">عنّي</a>
-        <a href="#contact" class="hover:text-white transition-colors">تواصل</a>
-        <!-- زر لمشاركة رابط الموقع بالكامل -->
-        <button type="button" id="share-site-btn" class="inline-flex items-center gap-1 rounded-full border border-neutral-700/80 px-3 py-1 text-[11px] text-neutral-200 hover:border-emerald-400 hover:text-emerald-200 transition-colors">
-          <span>مشاركة الموقع</span>
-          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M15 4.5L20.5 10L15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M9.5 10H20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-      </nav>
-
-      <!-- زر واتساب رئيسي - غيّر الرابط فقط لو بدّلت رقمك -->
-      <a href="https://wa.me/201111687422" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-emerald-500 hover:bg-emerald-400 text-black text-sm font-semibold px-4 py-2 transition-colors">
-        <span>اطلب مونتاج الآن</span>
-        <span class="inline-block text-lg">▶</span>
+    <div class="nav-actions">
+      <button class="btn" id="shareSite" type="button">مشاركة الموقع</button>
+      <a class="btn" href="https://drive.google.com/drive/folders/19IOL5jspgsPImomRC1mdSiCic5oX4vcw?usp=drive_link" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.6 3.8h6.8l5.2 9-3.4 5.9H6.8l-3.4-5.9 5.2-9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.6 3.8 12 9.7m3.4-5.9L12 9.7m8.6 3.1H13.8m-10.4 0h6.8m6.9 5.9-3.3-5.9m-7 5.9 3.4-5.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Drive Portfolio
       </a>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-24 space-y-24">
-    <!-- قسم البطل -->
-    <section class="grid md:grid-cols-[1.4fr,1fr] gap-10 items-center">
-      <div class="space-y-6">
-        <p class="text-xl sm:text-2xl font-bold text-emerald-400">Portfolio</p>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight">
-          <span class="block">نصنع لك صورة</span>
-          <span class="block bg-gradient-to-l from-emerald-400 via-sky-400 to-purple-400 bg-clip-text text-transparent">تليق بك أمام جمهورك</span>
-        </h1>
-        <p class="text-neutral-300 max-w-xl text-sm sm:text-base">
-          أساعد صُنّاع المحتوى، أصحاب المشاريع، والبراندات على تحويل اللقطات الخام والصور إلى فيديوهات وتصاميم احترافية
-          جاهزة للنشر على فيس بوك، يوتيوب، إنستجرام، تيك توك، والإعلانات الممولة.
-        </p>
-        <div class="flex flex-wrap gap-3 items-center">
-          <!-- زر واتساب في قسم البطل -->
-          <a href="https://wa.me/201111687422" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-emerald-500/70 text-emerald-300 hover:bg-emerald-500/10 text-sm font-medium px-5 py-2.5 transition-colors">
-            <span>تواصل عبر الواتساب</span>
-            <svg class="w-4 h-4" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor">
-              <path d="M16 3C9.373 3 4 8.373 4 15c0 2.275.623 4.395 1.71 6.233L4 29l7.01-1.84A11.9 11.9 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3m0 2.4c5.302 0 9.6 4.298 9.6 9.6 0 5.303-4.298 9.6-9.6 9.6-1.95 0-3.768-.588-5.326-1.7l-.38-.258-4.153 1.09 1.11-4.048-.248-.416A9.52 9.52 0 0 1 6.4 15c0-5.302 4.298-9.6 9.6-9.6m-3.017 4.5c-.184-.402-.378-.41-.554-.418-.144-.006-.308-.006-.473-.006s-.433.062-.66.309c-.227.247-.867.848-.867 2.069 0 1.22.888 2.4 1.012 2.566.124.165 1.713 2.738 4.204 3.727 2.079.82 2.5.657 2.95.617.45-.041 1.455-.595 1.66-1.169.206-.575.206-1.068.144-1.169-.062-.103-.227-.165-.473-.288-.247-.124-1.455-.718-1.68-.799-.227-.082-.392-.124-.554.124-.165.247-.637.799-.781.965-.144.165-.288.186-.535.062-.247-.124-1.044-.384-1.99-1.224-.736-.656-1.232-1.466-1.376-1.713-.144-.247-.016-.38.108-.504.111-.11.247-.288.371-.432.124-.144.165-.247.247-.412.082-.165.041-.309-.021-.432-.062-.124-.54-1.337-.76-1.829" />
-            </svg>
-          </a>
-        </div>
-        <div class="flex flex-wrap gap-6 pt-4 text-xs text-neutral-400">
-          <div>
-            <div class="text-neutral-200 font-semibold text-base">+500</div>
-            <div>فيديو منجَز</div>
-          </div>
-          <div>
-            <div class="text-neutral-200 font-semibold text-base">+30</div>
-            <div>براند وعميل</div>
-          </div>
-          <div>
-            <div class="text-neutral-200 font-semibold text-base">5+</div>
-            <div>سنوات خبرة</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="relative">
-        <div class="rounded-3xl border border-neutral-800 bg-gradient-to-br from-neutral-900/90 via-neutral-950/90 to-black/90 shadow-[0_0_60px_rgba(16,185,129,0.15)] p-4 sm:p-5 flex flex-col gap-4">
-          <div class="flex items-center justify-between gap-4">
-            <div>
-              <p class="text-xs text-neutral-400">آخر أعمالي</p>
-            </div>
-          </div>
-          <div class="relative grid grid-cols-3 gap-2 rounded-2xl border border-neutral-800 bg-neutral-900/70 p-2">
-            <div class="relative overflow-hidden rounded-xl aspect-[9/16] bg-black">
-              <iframe src="https://www.instagram.com/p/DVMiaV3jM3i/embed" class="w-full h-full" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-[9/16] bg-black">
-              <iframe src="https://www.instagram.com/reel/DR75V2yCq5g/embed" class="w-full h-full" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-[9/16] bg-black">
-              <iframe src="https://www.instagram.com/reel/DQyl8v9iujt/embed" class="w-full h-full" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-          <div class="grid grid-cols-3 gap-2 rounded-2xl border border-neutral-800 bg-neutral-900/70 p-2">
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/1G4yKLPtR2VOMiKguI_rxKSXHgVXobhby/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/10iaFJiiAmY4hzjdofRHfu99fAMAST2NW/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/10WhAO_lRHK6Fv4YlzXOwNqGsa8s0WCxa/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/1LQneivnPZRlj-_4nh6rt5TVFg7zKZdXh/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/1IhiE2yHjQW_THBIDAoWqSzlow74GrV9_/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/1GP0ZLeVUfNjPd5exh2XcQi0qfU11AH3Y/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="grid grid-cols-3 gap-2 rounded-2xl border border-neutral-800 bg-neutral-900/70 p-2 mt-2">
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/1Mj90wk4_CdXKQ6rLw6J8P0YFdnPG3-VG/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/16MMoYO4Y5rSCVFyL3Nca3owa0y1wU1wi/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/1aLCIb8rQgEbduTiJ_befo99dZ3nghoWv/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/1UazVA9iSCwgdn3l-iRr7hi4QeivGRHyt/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/1sTnB37KKYTO65d5ViA1RjcRoTO4GMxuC/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/1y4jjX0uASajmXBm_k_NaGz9ZrnRaQbpu/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/1DTfLUV2VJ1K3yHrAUFoxVseDSSjAY7gT/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/117AkrYs3u_WVLz6vIol5-EncavrwyT8U/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/19Gkx1h7g9bvFL2rtlJG9x7fuT1PQ_xFp/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/1gM2e8oj2h3G4OXIe0kmGRVTP71-HEyLf/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/1TfUopAYrHxL2hpzqk42WKpCv4w5knJnW/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="relative overflow-hidden rounded-xl aspect-square bg-black/80">
-              <iframe src="https://drive.google.com/file/d/1ZlRMkXcuWm6UxU8pKMrxKtRZJMkV2nRO/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- قسم الأعمال -->
-    <section id="portfolio" class="space-y-6">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-        <div>
-          <h2 class="text-2xl sm:text-3xl font-bold mb-1">نماذج من الأعمال</h2>
-          <p class="text-sm text-neutral-400 max-w-xl">
-            مجموعة مختارة من أعمال المونتاج
-          </p>
-        </div>
-      </div>
-
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- مشروع 1 -->
-        <article id="project-1" class="project-card group rounded-2xl border border-neutral-800/80 bg-neutral-950/60 hover:border-emerald-500/60 hover:bg-neutral-900/70 transition-colors flex flex-col" data-category="reel">
-          <div class="relative rounded-t-2xl overflow-hidden border-b border-neutral-800">
-            <div class="aspect-[9/16] bg-black">
-              <iframe src="https://www.instagram.com/p/DPWV2HnCg1D/embed" class="w-full h-full" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-          <div class="flex-1 flex flex-col p-4 space-y-3">
-            <div class="flex items-center justify-start pt-1 mt-auto">
-              <button type="button" data-share-button data-id="project-1" data-title="ريل سوشيال ميديا - مشروع 1" class="inline-flex items-center gap-1.5 text-xs text-neutral-300 hover:text-white">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M15 4.5L20.5 10L15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M9.5 10H20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M4 5.5C4 4.94772 4.44772 4.5 5 4.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                  <path d="M4 18.5C4 19.0523 4.44772 19.5 5 19.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                </svg>
-                <span>مشاركة العمل</span>
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- مشروع 2 -->
-        <article id="project-2" class="project-card group rounded-2xl border border-neutral-800/80 bg-neutral-950/60 hover:border-emerald-500/60 hover:bg-neutral-900/70 transition-colors flex flex-col" data-category="reel">
-          <div class="relative rounded-t-2xl overflow-hidden border-b border-neutral-800">
-            <div class="aspect-[9/16] bg-black">
-              <iframe src="https://www.instagram.com/p/DJZyhIgKdbp/embed" class="w-full h-full" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-          <div class="flex-1 flex flex-col p-4 space-y-3">
-            <div class="flex items-center justify-start pt-1 mt-auto">
-              <button type="button" data-share-button data-id="project-2" data-title="ريل سوشيال ميديا - مشروع 2" class="inline-flex items-center gap-1.5 text-xs text-neutral-300 hover:text-white">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M15 4.5L20.5 10L15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M9.5 10H20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M4 5.5C4 4.94772 4.44772 4.5 5 4.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                  <path d="M4 18.5C4 19.0523 4.44772 19.5 5 19.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                </svg>
-                <span>مشاركة العمل</span>
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- مشروع 3 -->
-        <article id="project-3" class="project-card group rounded-2xl border border-neutral-800/80 bg-neutral-950/60 hover:border-emerald-500/60 hover:bg-neutral-900/70 transition-colors flex flex-col" data-category="reel">
-          <div class="relative rounded-t-2xl overflow-hidden border-b border-neutral-800">
-            <div class="aspect-[9/16] bg-black">
-              <iframe src="https://www.instagram.com/p/DJmwTxpq_Z6/embed" class="w-full h-full" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-          <div class="flex-1 flex flex-col p-4 space-y-3">
-            <div class="flex items-center justify-start pt-1 mt-auto">
-              <button type="button" data-share-button data-id="project-3" data-title="ريل سوشيال ميديا - مشروع 3" class="inline-flex items-center gap-1.5 text-xs text-neutral-300 hover:text-white">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M15 4.5L20.5 10L15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M9.5 10H20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M4 5.5C4 4.94772 4.44772 4.5 5 4.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                  <path d="M4 18.5C4 19.0523 4.44772 19.5 5 19.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                </svg>
-                <span>مشاركة العمل</span>
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- مشروع 4 -->
-        <article id="project-4" class="project-card group rounded-2xl border border-neutral-800/80 bg-neutral-950/60 hover:border-emerald-500/60 hover:bg-neutral-900/70 transition-colors flex flex-col" data-category="reel">
-          <div class="relative rounded-t-2xl overflow-hidden border-b border-neutral-800">
-            <div class="aspect-[9/16] bg-black">
-              <iframe src="https://www.instagram.com/p/DJZsUQRKwkK/embed" class="w-full h-full" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-          <div class="flex-1 flex flex-col p-4 space-y-3">
-            <div class="flex items-center justify-start pt-1 mt-auto">
-              <button type="button" data-share-button data-id="project-4" data-title="ريل سوشيال ميديا - مشروع 4" class="inline-flex items-center gap-1.5 text-xs text-neutral-300 hover:text-white">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M15 4.5L20.5 10L15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M9.5 10H20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M4 5.5C4 4.94772 4.44772 4.5 5 4.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                  <path d="M4 18.5C4 19.0523 4.44772 19.5 5 19.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                </svg>
-                <span>مشاركة العمل</span>
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- مشروع 5 -->
-        <article id="project-5" class="project-card group rounded-2xl border border-neutral-800/80 bg-neutral-950/60 hover:border-emerald-500/60 hover:bg-neutral-900/70 transition-colors flex flex-col" data-category="reel">
-          <div class="relative rounded-t-2xl overflow-hidden border-b border-neutral-800">
-            <div class="aspect-[9/16] bg-black">
-              <iframe src="https://www.instagram.com/p/DJZsEp6KmyS/embed" class="w-full h-full" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-          <div class="flex-1 flex flex-col p-4 space-y-3">
-            <div class="flex items-center justify-start pt-1 mt-auto">
-              <button type="button" data-share-button data-id="project-5" data-title="ريل سوشيال ميديا - مشروع 5" class="inline-flex items-center gap-1.5 text-xs text-neutral-300 hover:text-white">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M15 4.5L20.5 10L15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M9.5 10H20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M4 5.5C4 4.94772 4.44772 4.5 5 4.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                  <path d="M4 18.5C4 19.0523 4.44772 19.5 5 19.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                </svg>
-                <span>مشاركة العمل</span>
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- مشروع 6 -->
-        <article id="project-6" class="project-card group rounded-2xl border border-neutral-800/80 bg-neutral-950/60 hover:border-emerald-500/60 hover:bg-neutral-900/70 transition-colors flex flex-col" data-category="reel">
-          <div class="relative rounded-t-2xl overflow-hidden border-b border-neutral-800">
-            <div class="aspect-[9/16] bg-black">
-              <iframe src="https://www.instagram.com/p/DJZrqEWqHEi/embed" class="w-full h-full" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-          <div class="flex-1 flex flex-col p-4 space-y-3">
-            <div class="flex items-center justify-start pt-1 mt-auto">
-              <button type="button" data-share-button data-id="project-6" data-title="ريل سوشيال ميديا - مشروع 6" class="inline-flex items-center gap-1.5 text-xs text-neutral-300 hover:text-white">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M15 4.5L20.5 10L15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M9.5 10H20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M4 5.5C4 4.94772 4.44772 4.5 5 4.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                  <path d="M4 18.5C4 19.0523 4.44772 19.5 5 19.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                </svg>
-                <span>مشاركة العمل</span>
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- مشروع 7 -->
-        <article id="project-7" class="project-card group rounded-2xl border border-neutral-800/80 bg-neutral-950/60 hover:border-emerald-500/60 hover:bg-neutral-900/70 transition-colors flex flex-col" data-category="video">
-          <div class="relative rounded-t-2xl overflow-hidden border-b border-neutral-800">
-            <div class="aspect-video bg-black">
-              <iframe src="https://drive.google.com/file/d/1IeuVbut59Ot0t-6W1uzOmsqIPJmxqWr0/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="flex-1 flex flex-col p-4 space-y-3">
-            <div class="flex items-center justify-start pt-1 mt-auto">
-              <button type="button" data-share-button data-id="project-7" data-title="فيديو جوجل درايف - مشروع 7" class="inline-flex items-center gap-1.5 text-xs text-neutral-300 hover:text-white">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M15 4.5L20.5 10L15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M9.5 10H20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M4 5.5C4 4.94772 4.44772 4.5 5 4.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                  <path d="M4 18.5C4 19.0523 4.44772 19.5 5 19.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                </svg>
-                <span>مشاركة العمل</span>
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- مشروع 8 -->
-        <article id="project-8" class="project-card group rounded-2xl border border-neutral-800/80 bg-neutral-950/60 hover:border-emerald-500/60 hover:bg-neutral-900/70 transition-colors flex flex-col" data-category="video">
-          <div class="relative rounded-t-2xl overflow-hidden border-b border-neutral-800">
-            <div class="aspect-video bg-black">
-              <iframe src="https://drive.google.com/file/d/1ArfyXSZOIGMTf3Fl-D0Mg3U_Wq9DQiha/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="flex-1 flex flex-col p-4 space-y-3">
-            <div class="flex items-center justify-start pt-1 mt-auto">
-              <button type="button" data-share-button data-id="project-8" data-title="فيديو جوجل درايف - مشروع 8" class="inline-flex items-center gap-1.5 text-xs text-neutral-300 hover:text-white">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M15 4.5L20.5 10L15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M9.5 10H20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M4 5.5C4 4.94772 4.44772 4.5 5 4.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                  <path d="M4 18.5C4 19.0523 4.44772 19.5 5 19.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                </svg>
-                <span>مشاركة العمل</span>
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- مشروع 9 -->
-        <article id="project-9" class="project-card group rounded-2xl border border-neutral-800/80 bg-neutral-950/60 hover:border-emerald-500/60 hover:bg-neutral-900/70 transition-colors flex flex-col" data-category="video">
-          <div class="relative rounded-t-2xl overflow-hidden border-b border-neutral-800">
-            <div class="aspect-video bg-black">
-              <iframe src="https://drive.google.com/file/d/1O5K-dWw8Dk1iCz5VnhDpoporRwpUn2G8/preview" class="w-full h-full" loading="lazy" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="flex-1 flex flex-col p-4 space-y-3">
-            <div class="flex items-center justify-start pt-1 mt-auto">
-              <button type="button" data-share-button data-id="project-9" data-title="فيديو جوجل درايف - مشروع 9" class="inline-flex items-center gap-1.5 text-xs text-neutral-300 hover:text-white">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M15 4.5L20.5 10L15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M9.5 10H20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M4 5.5C4 4.94772 4.44772 4.5 5 4.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                  <path d="M4 18.5C4 19.0523 4.44772 19.5 5 19.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                </svg>
-                <span>مشاركة العمل</span>
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- مشروع 10 -->
-        <article id="project-10" class="project-card group rounded-2xl border border-neutral-800/80 bg-neutral-950/60 hover:border-emerald-500/60 hover:bg-neutral-900/70 transition-colors flex flex-col" data-category="youtube">
-          <div class="relative rounded-t-2xl overflow-hidden border-b border-neutral-800">
-            <div class="aspect-video bg-black">
-              <iframe src="https://www.youtube.com/embed/wpwqCLddKzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-full"></iframe>
-            </div>
-          </div>
-          <div class="flex-1 flex flex-col p-4 space-y-3">
-            <div class="flex items-center justify-start pt-1 mt-auto">
-              <button type="button" data-share-button data-id="project-10" data-title="فيديو يوتيوب - مشروع 10" class="inline-flex items-center gap-1.5 text-xs text-neutral-300 hover:text-white">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M15 4.5L20.5 10L15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M9.5 10H20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M4 5.5C4 4.94772 4.44772 4.5 5 4.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                  <path d="M4 18.5C4 19.0523 4.44772 19.5 5 19.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                </svg>
-                <span>مشاركة العمل</span>
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- مشروع 11 -->
-        <article id="project-11" class="project-card group rounded-2xl border border-neutral-800/80 bg-neutral-950/60 hover:border-emerald-500/60 hover:bg-neutral-900/70 transition-colors flex flex-col" data-category="youtube">
-          <div class="relative rounded-t-2xl overflow-hidden border-b border-neutral-800">
-            <div class="aspect-video bg-black">
-              <iframe src="https://www.youtube.com/embed/INkpWwGQVqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-full"></iframe>
-            </div>
-          </div>
-          <div class="flex-1 flex flex-col p-4 space-y-3">
-            <div class="flex items-center justify-start pt-1 mt-auto">
-              <button type="button" data-share-button data-id="project-11" data-title="فيديو يوتيوب - مشروع 11" class="inline-flex items-center gap-1.5 text-xs text-neutral-300 hover:text-white">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M15 4.5L20.5 10L15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M9.5 10H20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M4 5.5C4 4.94772 4.44772 4.5 5 4.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                  <path d="M4 18.5C4 19.0523 4.44772 19.5 5 19.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                </svg>
-                <span>مشاركة العمل</span>
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- مشروع 12 -->
-        <article id="project-12" class="project-card group rounded-2xl border border-neutral-800/80 bg-neutral-950/60 hover:border-emerald-500/60 hover:bg-neutral-900/70 transition-colors flex flex-col" data-category="youtube">
-          <div class="relative rounded-t-2xl overflow-hidden border-b border-neutral-800">
-            <div class="aspect-video bg-black">
-              <iframe src="https://www.youtube.com/embed/xmSGtoT_mpM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-full"></iframe>
-            </div>
-          </div>
-          <div class="flex-1 flex flex-col p-4 space-y-3">
-            <div class="flex items-center justify-start pt-1 mt-auto">
-              <button type="button" data-share-button data-id="project-12" data-title="فيديو يوتيوب - مشروع 12" class="inline-flex items-center gap-1.5 text-xs text-neutral-300 hover:text-white">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M15 4.5L20.5 10L15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M9.5 10H20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M4 5.5C4 4.94772 4.44772 4.5 5 4.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                  <path d="M4 18.5C4 19.0523 4.44772 19.5 5 19.5H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                </svg>
-                <span>مشاركة العمل</span>
-              </button>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- قسم الخدمات -->
-    <section id="services" class="space-y-6">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-        <div>
-          <h2 class="text-2xl sm:text-3xl font-bold mb-1">الخدمات التي أقدّمها</h2>
-          <p class="text-sm text-neutral-400 max-w-xl">
-            خدمات تصميم ومونتاج متكاملة تناسب أنواع المحتوى المختلفة، من تصاميم سوشيال و فيديوهات قصيرة سريعة إلى حلقات يوتيوب وبرامج كاملة.
-          </p>
-        </div>
-      </div>
-      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 text-sm">
-        <div class="rounded-2xl border border-neutral-800 bg-neutral-950/70 p-4 flex flex-col gap-2">
-          <div class="flex items-center justify-between mb-1">
-            <h3 class="font-semibold text-neutral-50">مونتاج سوشيال ميديا</h3>
-            <span class="text-[11px] text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-2 py-0.5">الأكثر طلبًا</span>
-          </div>
-          <p class="text-xs text-neutral-400 mb-2">ريلز، تيك توك، شورتس، محتوى تعليمي أو ترفيهي سريع.</p>
-          <ul class="text-xs text-neutral-300 space-y-1.5 list-disc pr-4">
-            <li>قص وتقطيع ذكي حسب الإيقاع</li>
-            <li>إضافة ترجمة (Subtitles) متحركة</li>
-            <li>إضافة مؤثرات صوتية وTransitions</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-neutral-800 bg-neutral-950/70 p-4 flex flex-col gap-2">
-          <div class="flex items-center justify-between mb-1">
-            <h3 class="font-semibold text-neutral-50">مونتاج يوتيوب وبرامج</h3>
-          </div>
-          <p class="text-xs text-neutral-400 mb-2">فيديوهات يوتيوب، Vlogs، حلقات بودكاست وبرامج حوارية.</p>
-          <ul class="text-xs text-neutral-300 space-y-1.5 list-disc pr-4">
-            <li>تنظيم القصة وتوزيع الفقرات</li>
-            <li>تصحيح ألوان أساسي وتحسين الصوت</li>
-            <li>تصميم انترو/اوترو وLower Thirds</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-neutral-800 bg-neutral-950/70 p-4 flex flex-col gap-2">
-          <div class="flex items-center justify-between mb-1">
-            <h3 class="font-semibold text-neutral-50">تصميم سوشيال ميديا</h3>
-          </div>
-          <p class="text-xs text-neutral-400 mb-2">تصاميم جذابة تناسب هويّة البراند ونوع المحتوى.</p>
-          <ul class="text-xs text-neutral-300 space-y-1.5 list-disc pr-4">
-            <li>تصاميم جذابة تناسب محتواك وهويتك.</li>
-            <li>أقدّم لك المحتوى والأفكار لتصاميم تزيد التفاعل والمبيعات.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- قسم عنّي -->
-    <section id="about" class="space-y-6">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-        <div>
-          <h2 class="text-2xl sm:text-3xl font-bold mb-1">عنّي</h2>
-          <p class="text-sm text-neutral-400 max-w-xl">
-            جرافيك ديزاينر و محرر فيديو عملت لأكثر من 5 سنوات مع العديد من الشركات في قطاعات مختلفة. يمكنكم الاطّلاع على بعض هذه الأعمال من خلال الزر التالي.
-          </p>
-          <a href="https://drive.google.com/drive/folders/19IOL5jspgsPImomRC1mdSiCic5oX4vcw?usp=drive_link" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-2 rounded-full border border-emerald-500/70 text-emerald-300 hover:bg-emerald-500/10 text-xs font-medium px-4 py-1.5 transition-colors">
-            <span>Drive portfolio</span>
-          </a>
-        </div>
-      </div>
-      <div class="grid gap-6 md:grid-cols-[1.4fr,1fr] items-start text-sm">
-        <div class="rounded-2xl border border-neutral-800 bg-neutral-950/80 p-4 space-y-4">
-          <p class="text-neutral-200 text-sm font-semibold">
-            برامج أستخدمها
-          </p>
-          <p class="text-neutral-300 text-xs">
-            مجموعة من أهم الأدوات والبرامج التي أستخدمها بشكل يومي في شغلي في التصميم والمونتاج.
-          </p>
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
-            <div class="flex items-center gap-2 rounded-xl bg-neutral-900 border border-neutral-800 px-2.5 py-1.5">
-              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#2A2A5A] text-[11px] font-semibold text-purple-200">Pr</span>
-              <span class="text-neutral-200">Premiere Pro</span>
-            </div>
-            <div class="flex items-center gap-2 rounded-xl bg-neutral-900 border border-neutral-800 px-2.5 py-1.5">
-              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#2B225F] text-[11px] font-semibold text-indigo-200">Ae</span>
-              <span class="text-neutral-200">After Effects</span>
-            </div>
-            <div class="flex items-center gap-2 rounded-xl bg-neutral-900 border border-neutral-800 px-2.5 py-1.5">
-              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#0C2C4A] text-[11px] font-semibold text-sky-200">Ps</span>
-              <span class="text-neutral-200">Photoshop</span>
-            </div>
-            <div class="flex items-center gap-2 rounded-xl bg-neutral-900 border border-neutral-800 px-2.5 py-1.5">
-              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#3A2605] text-[11px] font-semibold text-amber-200">Ai</span>
-              <span class="text-neutral-200">Illustrator</span>
-            </div>
-            <div class="flex items-center gap-2 rounded-xl bg-neutral-900 border border-neutral-800 px-2.5 py-1.5">
-              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-700 text-[10px] font-semibold text-emerald-50">GPT</span>
-              <span class="text-neutral-200">ChatGPT</span>
-            </div>
-            <div class="flex items-center gap-2 rounded-xl bg-neutral-900 border border-neutral-800 px-2.5 py-1.5">
-              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#1A73E8] text-[11px] font-semibold text-white">G</span>
-              <span class="text-neutral-200">Google Studio</span>
-            </div>
-          </div>
-        </div>
-        <div class="grid gap-3 text-xs">
-          <div class="rounded-2xl border border-neutral-800 bg-neutral-950/80 p-3.5 flex items-center justify-between">
-            <div>
-              <p class="text-neutral-300 mb-0.5">مدة التسليم المعتادة</p>
-              <p class="text-[11px] text-neutral-400">حسب طبيعة التصميم أو الفيديو ومدته ونوعه.</p>
-            </div>
-            <p class="text-base font-semibold text-emerald-300">من 24 إلى 72 ساعة</p>
-          </div>
-          <div class="rounded-2xl border border-neutral-800 bg-neutral-950/80 p-3.5 flex flex-col gap-1.5">
-            <p class="text-neutral-300">أعمل مع:</p>
-            <div class="flex flex-wrap gap-2 text-[11px] text-neutral-200">
-              <span class="px-2 py-1 rounded-full bg-neutral-900 border border-neutral-700/70">صُنّاع محتوى</span>
-              <span class="px-2 py-1 rounded-full bg-neutral-900 border border-neutral-700/70">براندات ومنتجات</span>
-              <span class="px-2 py-1 rounded-full bg-neutral-900 border border-neutral-700/70">متاجر إلكترونية</span>
-              <span class="px-2 py-1 rounded-full bg-neutral-900 border border-neutral-700/70">بودكاست وبرامج</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- قسم التواصل -->
-    <section id="contact" class="space-y-6">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-        <div>
-          <h2 class="text-2xl sm:text-3xl font-bold mb-1">تواصل وحجز</h2>
-          <p class="text-sm text-neutral-400 max-w-xl">
-            أرسل تفاصيل التصميم أو الفيديو الذي تحتاجه على الواتساب أو اكتب لي رسالة سريعة، وسأعود إليك بأقرب وقت مع تفاصيل السعر ومدة التسليم.
-          </p>
-        </div>
-      </div>
-
-      <div class="grid gap-6 md:grid-cols-[1.2fr,1fr] items-start">
-        <!-- نموذج بسيط (استعراض فقط، بدون باك إند) -->
-        <form id="contact-form" class="rounded-2xl border border-neutral-800 bg-neutral-950/80 p-4 space-y-3 text-sm">
-          <div class="grid sm:grid-cols-2 gap-3">
-            <div>
-              <label for="name" class="block text-xs text-neutral-300 mb-1">الاسم</label>
-              <input id="name" name="name" type="text" class="w-full rounded-xl bg-neutral-900 border border-neutral-700/80 px-3 py-2 text-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/70" placeholder="مثال: أحمد محمد" />
-            </div>
-            <div>
-              <label for="platform" class="block text-xs text-neutral-300 mb-1">المنصّة المستهدفة</label>
-              <select id="platform" name="platform" class="w-full rounded-xl bg-neutral-900 border border-neutral-700/80 px-3 py-2 text-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/70">
-                <option value="">اختر المنصّة</option>
-                <option value="reels">Reels / TikTok / Shorts</option>
-                <option value="youtube">YouTube</option>
-                <option value="ads">إعلانات ممولة</option>
-                <option value="other">أخرى</option>
-              </select>
-            </div>
-          </div>
-          <div>
-            <label for="details" class="block text-xs text-neutral-300 mb-1">تفاصيل العمل المطلوب</label>
-            <textarea id="details" name="details" rows="4" class="w-full rounded-xl bg-neutral-900 border border-neutral-700/80 px-3 py-2 text-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/70" placeholder="اكتب نوع الفيديو، المدة التقريبية، وأي ملاحظات مهمة..."></textarea>
-          </div>
-          <p class="text-[11px] text-neutral-400">
-            عند الإرسال سيتم تجهيز رسالة جاهزة لتكمل الكلام عبر الواتساب مباشرة.
-          </p>
-          <button type="submit" class="inline-flex items-center gap-2 rounded-full bg-emerald-500 hover:bg-emerald-400 text-black text-xs font-semibold px-5 py-2 transition-colors">
-            <span>إرسال التفاصيل على الواتساب</span>
-            <svg class="w-3.5 h-3.5" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor">
-              <path d="M16 3C9.373 3 4 8.373 4 15c0 2.275.623 4.395 1.71 6.233L4 29l7.01-1.84A11.9 11.9 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3m0 2.4c5.302 0 9.6 4.298 9.6 9.6 0 5.303-4.298 9.6-9.6 9.6-1.95 0-3.768-.588-5.326-1.7l-.38-.258-4.153 1.09 1.11-4.048-.248-.416A9.52 9.52 0 0 1 6.4 15c0-5.302 4.298-9.6 9.6-9.6m-3.017 4.5c-.184-.402-.378-.41-.554-.418-.144-.006-.308-.006-.473-.006s-.433.062-.66.309c-.227.247-.867.848-.867 2.069 0 1.22.888 2.4 1.012 2.566.124.165 1.713 2.738 4.204 3.727 2.079.82 2.5.657 2.95.617.45-.041 1.455-.595 1.66-1.169.206-.575.206-1.068.144-1.169-.062-.103-.227-.165-.473-.288-.247-.124-1.455-.718-1.68-.799-.227-.082-.392-.124-.554.124-.165.247-.637.799-.781.965-.144.165-.288.186-.535.062-.247-.124-1.044-.384-1.99-1.224-.736-.656-1.232-1.466-1.376-1.713-.144-.247-.016-.38.108-.504.111-.11.247-.288.371-.432.124-.144.165-.247.247-.412.082-.165.041-.309-.021-.432-.062-.124-.54-1.337-.76-1.829" />
-            </svg>
-          </button>
-        </form>
-
-        <div class="rounded-2xl border border-neutral-800 bg-neutral-950/80 p-4 space-y-3 text-sm">
-          <p class="text-neutral-200 text-sm mb-1">معلومات هامة:</p>
-          <ul class="text-xs text-neutral-300 space-y-2">
-            <li>• التواصل الأسرع يكون عبر الواتساب.</li>
-            <li>• يمكن إرسال عينات من الشغل المطلوب قبل الاتفاق على التكلفة.</li>
-            <li>• لا أنفّذ أي عمل إلا بعد دفع جزء من التكلفة المتفق عليها مسبقًا.</li>
-            <li>• إمكانية التعديل على الفيديو بعد التسليم (حسب الباقة المتفق عليها).</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- أيقونة واتساب عائمة - غيّر الرابط لو بدّلت رقمك -->
-  <a href="https://wa.me/201111687422" target="_blank" rel="noopener" class="fixed bottom-4 right-4 z-40">
-    <div class="relative group">
-      <span class="absolute -top-9 right-0 rounded-full bg-black/85 text-[10px] px-2 py-1 text-neutral-100 border border-neutral-700/80 opacity-0 group-hover:opacity-100 transition-opacity">تواصل سريع</span>
-      <div class="w-12 h-12 rounded-full bg-emerald-500 shadow-lg shadow-emerald-500/40 flex items-center justify-center text-white hover:bg-emerald-400 transition-colors border border-emerald-300/80">
-        <svg class="w-6 h-6" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor">
-          <path d="M16 3C9.373 3 4 8.373 4 15c0 2.275.623 4.395 1.71 6.233L4 29l7.01-1.84A11.9 11.9 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3m0 2.4c5.302 0 9.6 4.298 9.6 9.6 0 5.303-4.298 9.6-9.6 9.6-1.95 0-3.768-.588-5.326-1.7l-.38-.258-4.153 1.09 1.11-4.048-.248-.416A9.52 9.52 0 0 1 6.4 15c0-5.302 4.298-9.6 9.6-9.6m-3.017 4.5c-.184-.402-.378-.41-.554-.418-.144-.006-.308-.006-.473-.006s-.433.062-.66.309c-.227.247-.867.848-.867 2.069 0 1.22.888 2.4 1.012 2.566.124.165 1.713 2.738 4.204 3.727 2.079.82 2.5.657 2.95.617.45-.041 1.455-.595 1.66-1.169.206-.575.206-1.068.144-1.169-.062-.103-.227-.165-.473-.288-.247-.124-1.455-.718-1.68-.799-.227-.082-.392-.124-.554.124-.165.247-.637.799-.781.965-.144.165-.288.186-.535.062-.247-.124-1.044-.384-1.99-1.224-.736-.656-1.232-1.466-1.376-1.713-.144-.247-.016-.38.108-.504.111-.11.247-.288.371-.432.124-.144.165-.247.247-.412.082-.165.041-.309-.021-.432-.062-.124-.54-1.337-.76-1.829" />
-        </svg>
-      </div>
-    </div>
-  </a>
-
-  <!-- Toast / تنبيه صغير -->
-  <div id="toast" class="fixed bottom-6 left-4 z-40 hidden">
-    <div class="flex items-center gap-2 rounded-full bg-black/85 border border-neutral-700 px-3 py-1.5 text-[11px] text-neutral-100 shadow-lg">
-      <span id="toast-icon" class="text-emerald-400">✔</span>
-      <span id="toast-message">تم نسخ رابط العمل</span>
+      <a class="btn primary" href="https://wa.me/201111687422" target="_blank" rel="noopener">ابدأ مشروعك</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="فتح القائمة">☰</button>
     </div>
   </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#top">الرئيسية</a><a href="#work">الأعمال</a><a href="#services">الخدمات</a><a href="#video">الفيديو</a><a href="#experience">الخبرات</a><a href="#contact">تواصل</a>
+    <a href="https://drive.google.com/drive/folders/19IOL5jspgsPImomRC1mdSiCic5oX4vcw?usp=drive_link" target="_blank" rel="noopener">Drive Portfolio</a>
+  </div>
+</header>
 
-  <!-- تذييل -->
-  <footer class="border-t border-neutral-800/80 bg-black/70 backdrop-blur-sm text-[11px] text-neutral-500">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row gap-2 items-center justify-between">
-      <p>© <span id="year"></span> جميع الحقوق محفوظة. Mohamed Sayed (Video Editor)</p>
+<main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="kicker">Portfolio 2026</span>
+        <h1><span class="hero-line">محتوى بصري واضح،</span><span class="hero-line accent">بسيط، ويترك أثرًا.</span></h1>
+        <p>أنا محمد سيد — Graphic Designer & Video Editor بخبرة أكثر من 5 سنوات في تصميم السوشيال ميديا، المونتاج، الموشن جرافيك والتصميمات المطبوعة.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#work">شاهد الأعمال</a>
+          <a class="btn" href="https://wa.me/201111687422" target="_blank" rel="noopener">تواصل واتساب</a>
+        </div>
+        <div class="hero-note">
+          <span class="note-item"><i class="note-dot"></i> متاح Remote · Freelance · Part-Time</span>
+          <span class="note-item">Egypt · Gulf · International</span>
+          <span class="note-item">Asyut, Egypt</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="نماذج من أعمال محمد سيد">
+        <div class="hero-panel">
+          <div class="hero-image"><img src="assets/education-showcase.jpg" alt="Selected design work"></div>
+          <div class="hero-bottom">
+            <div><strong>Selected Work</strong><span>Graphic Design · Video Editing</span></div>
+            <div class="tool-row"><span class="tool">Ps</span><span class="tool">Ai</span><span class="tool">Pr</span><span class="tool">Ae</span></div>
+          </div>
+        </div>
+        <div class="float-card one"><strong>5+ Years</strong><span>Experience</span></div>
+        <div class="float-card two"><strong>52 / month</strong><span>Video production capacity</span></div>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // إعداد السنة الحالية في التذييل
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat"><strong>5+</strong><span>سنوات خبرة</span></div>
+      <div class="stat"><strong>52</strong><span>فيديو تقريبًا شهريًا ضمن EHUNT</span></div>
+      <div class="stat"><strong>50+</strong><span>مشروع تصميم وفيديو ضمن TPS</span></div>
+    </div>
+  </section>
 
-    // زر مشاركة العمل
-    const shareButtons = document.querySelectorAll('[data-share-button]');
-    const toast = document.getElementById('toast');
-    const toastMessage = document.getElementById('toast-message');
-    const toastIcon = document.getElementById('toast-icon');
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-title"><div><span class="kicker">What I Do</span><h2>الخدمات الأساسية</h2></div><p>نفس فكرة الريفرنس: عرض مباشر وبسيط للخدمات بدون ازدحام بصري أو نصوص طويلة.</p></div>
+      <div class="category-grid">
+        <article class="category-card"><div class="category-head"><h3>Social Media Design</h3><span class="category-icon">✦</span></div><div class="category-list"><div>Promotional Posts <b>01</b></div><div>Campaigns & Carousels <b>02</b></div><div>Stories & Vertical Content <b>03</b></div></div></article>
+        <article class="category-card"><div class="category-head"><h3>Video Editing</h3><span class="category-icon">▶</span></div><div class="category-list"><div>Reels & Short-form <b>01</b></div><div>YouTube & Promotional <b>02</b></div><div>Motion & Sound Design <b>03</b></div></div></article>
+        <article class="category-card"><div class="category-head"><h3>Print Design</h3><span class="category-icon">▦</span></div><div class="category-list"><div>Posters & Flyers <b>01</b></div><div>Brochures & Cards <b>02</b></div><div>Banners & Materials <b>03</b></div></div></article>
+      </div>
+    </div>
+  </section>
 
-    function showToast(message, type = 'success') {
-      toastMessage.textContent = message;
-      if (type === 'success') {
-        toastIcon.textContent = '✔';
-        toastIcon.className = 'text-emerald-400';
-      } else {
-        toastIcon.textContent = '!';
-        toastIcon.className = 'text-amber-400';
-      }
-      toast.classList.remove('hidden');
-      clearTimeout(window.__toastTimeout);
-      window.__toastTimeout = setTimeout(() => {
-        toast.classList.add('hidden');
-      }, 2600);
-    }
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-title"><div><span class="kicker">Selected Projects</span><h2>أعمال مختارة</h2></div><p>مشروعات مختارة توضح تنوع القطاعات واتجاه التصميم، مع ترك المساحة الأكبر للعمل نفسه.</p></div>
+      <div class="work-grid">
+        <article class="work-card"><div class="work-media"><img src="assets/automotive-showcase.jpg" alt="Bin Wazir Automotive"></div><div class="work-body"><small>AUTOMOTIVE · SOCIAL MEDIA</small><h3>Bin Wazir Automotive</h3><p>تصميم محتوى ترويجي للموديلات والعروض والأسعار بصورة واضحة وسهلة القراءة.</p><div class="work-tags"><span>Photoshop</span><span>Social Media</span><span>Automotive</span></div></div></article>
+        <article class="work-card"><div class="work-media"><img src="assets/education-showcase.jpg" alt="Fursan Al-Karak Academy"></div><div class="work-body"><small>EDUCATION · CONTENT PLAN</small><h3>Fursan Al-Karak Academy</h3><p>خطة محتوى شهرية وتصميمات عربية تعليمية بهوية بصرية متماسكة.</p><div class="work-tags"><span>Education</span><span>Content Plan</span><span>Photoshop</span></div></div></article>
+        <article class="work-card"><div class="work-media"><img src="assets/misc-showcase.jpg" alt="Selected Social Designs"></div><div class="work-body"><small>MULTI-INDUSTRY · DESIGN</small><h3>Selected Social Designs</h3><p>نماذج متنوعة من القطاع الطبي والأغذية توضح المرونة في الأسلوب والهوية.</p><div class="work-tags"><span>Dental</span><span>Food</span><span>Social Media</span></div></div></article>
+      </div>
+    </div>
+  </section>
 
-    function getProjectShareUrl(id) {
-      const url = new URL(window.location.href);
-      url.hash = id;
-      return url.toString();
-    }
+  <section class="section">
+    <div class="container">
+      <div class="section-title"><div><span class="kicker">Services</span><h2>التنفيذ من الفكرة للنشر</h2></div><p>تفاصيل الخدمة موجودة لكن بصياغة مختصرة حتى يظل الموقع Minimal وسهل التصفح.</p></div>
+      <div class="service-grid">
+        <article class="service"><span class="service-num">01 · DESIGN</span><h3>Social Media Design</h3><p>محتوى بصري يدعم الحملة ويحافظ على اتساق البراند.</p><ul><li>Promotional posts & campaigns</li><li>Carousel designs</li><li>Stories and vertical content</li><li>Product & service presentations</li></ul></article>
+        <article class="service"><span class="service-num">02 · VIDEO</span><h3>Video Editing</h3><p>مونتاج متكامل مع إيقاع واضح ومخرجات جاهزة لكل منصة.</p><ul><li>Reels & short-form videos</li><li>YouTube & promotional content</li><li>Text animation & motion graphics</li><li>Sound design & basic color correction</li></ul></article>
+        <article class="service"><span class="service-num">03 · PRINT</span><h3>Print Design</h3><p>مواد مطبوعة بسيطة وواضحة ومتوافقة مع هوية العميل.</p><ul><li>Posters & flyers</li><li>Brochures</li><li>Business cards</li><li>Banners & promotional materials</li></ul></article>
+      </div>
+    </div>
+  </section>
 
-    async function copyToClipboard(text) {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText(text);
-        return true;
-      }
-      const textarea = document.createElement('textarea');
-      textarea.value = text;
-      textarea.style.position = 'fixed';
-      textarea.style.opacity = '0';
-      document.body.appendChild(textarea);
-      textarea.focus();
-      textarea.select();
-      try {
-        document.execCommand('copy');
-        return true;
-      } catch (e) {
-        return false;
-      } finally {
-        document.body.removeChild(textarea);
-      }
-    }
+  <section class="section" id="video">
+    <div class="container">
+      <div class="section-title"><div><span class="kicker">Selected Work</span><h2>Selected Video Work</h2></div><p>18 عملاً مختارًا: 6 Social Media Designs، و6 Reels، و6 أعمال YouTube / Long-form.</p></div>
+      <div class="toolbar">
+        <button class="filter active" data-filter="all">الكل · 18</button>
+        <button class="filter" data-filter="designs">Social Designs · 6</button>
+        <button class="filter" data-filter="reels">Reels · 6</button>
+        <button class="filter" data-filter="youtube">YouTube · 6</button>
+      </div>
+      <div class="video-grid">
+        <!-- 6 Social Media Designs -->
+        <article class="video-card" data-category="designs"><div class="video-frame design"><img src="assets/selected-social/social-01-automotive-corolla.jpg" loading="lazy" alt="Automotive social media design — Toyota Corolla"></div><div class="video-meta"><strong>Automotive Campaign 01</strong><span>Social Media Design · Automotive</span></div></article>
+        <article class="video-card" data-category="designs"><div class="video-frame design"><img src="assets/selected-social/social-02-automotive-innova.jpg" loading="lazy" alt="Automotive social media design — Toyota Innova"></div><div class="video-meta"><strong>Automotive Campaign 02</strong><span>Social Media Design · Automotive</span></div></article>
+        <article class="video-card" data-category="designs"><div class="video-frame design"><img src="assets/selected-social/social-03-education-tech.jpg" loading="lazy" alt="Education social media design"></div><div class="video-meta"><strong>Education Campaign 01</strong><span>Social Media Design · Education</span></div></article>
+        <article class="video-card" data-category="designs"><div class="video-frame design"><img src="assets/selected-social/social-04-education-future.jpg" loading="lazy" alt="Education social media design"></div><div class="video-meta"><strong>Education Campaign 02</strong><span>Social Media Design · Education</span></div></article>
+        <article class="video-card" data-category="designs"><div class="video-frame design"><img src="assets/selected-social/social-05-dental.jpg" loading="lazy" alt="Dental clinic social media design"></div><div class="video-meta"><strong>Bros Dental Clinics</strong><span>Social Media Design · Healthcare</span></div></article>
+        <article class="video-card" data-category="designs"><div class="video-frame design"><img src="assets/selected-social/social-06-cake.jpg" loading="lazy" alt="Cake Maker social media design"></div><div class="video-meta"><strong>Cake Maker</strong><span>Social Media Design · Food</span></div></article>
 
-    shareButtons.forEach((btn) => {
-      btn.addEventListener('click', async () => {
-        const id = btn.getAttribute('data-id');
-        const title = btn.getAttribute('data-title') || 'عمل مونتاج فيديو';
-        const url = getProjectShareUrl(id);
+        <!-- 6 Reels -->
+        <article class="video-card" data-category="reels"><div class="video-frame vertical"><iframe src="https://www.instagram.com/reel/DR758TOihWA/embed" loading="lazy" allowfullscreen title="Instagram Reel 1"></iframe></div><div class="video-meta"><strong>Social Media Reel 01</strong><span>Editing · Motion</span></div></article>
+        <article class="video-card" data-category="reels"><div class="video-frame vertical"><iframe src="https://www.instagram.com/reel/DR75V2yCq5g/embed" loading="lazy" allowfullscreen title="Instagram Reel 2"></iframe></div><div class="video-meta"><strong>Social Media Reel 02</strong><span>Editing · Text Animation</span></div></article>
+        <article class="video-card" data-category="reels"><div class="video-frame vertical"><iframe src="https://www.instagram.com/reel/DQyl8v9iujt/embed" loading="lazy" allowfullscreen title="Instagram Reel 3"></iframe></div><div class="video-meta"><strong>Social Media Reel 03</strong><span>Post Production</span></div></article>
+        <article class="video-card" data-category="reels"><div class="video-frame vertical"><iframe src="https://www.instagram.com/reel/DPWV2HnCg1D/embed" loading="lazy" allowfullscreen title="Instagram Reel 4"></iframe></div><div class="video-meta"><strong>Social Media Reel 04</strong><span>Editing · Short-form</span></div></article>
+        <article class="video-card" data-category="reels"><div class="video-frame vertical"><iframe src="https://www.instagram.com/reel/DJZyhIgKdbp/embed" loading="lazy" allowfullscreen title="Instagram Reel 5"></iframe></div><div class="video-meta"><strong>Social Media Reel 05</strong><span>Editing · Social Content</span></div></article>
+        <article class="video-card" data-category="reels"><div class="video-frame vertical"><iframe src="https://www.instagram.com/reel/DJZrqEWqHEi/embed" loading="lazy" allowfullscreen title="Instagram Reel 6"></iframe></div><div class="video-meta"><strong>Social Media Reel 06</strong><span>Editing · Promotional</span></div></article>
+<!-- 6 YouTube / Long-form Works -->
+        <article class="video-card" data-category="youtube"><div class="video-frame"><iframe src="https://www.youtube.com/embed/wpwqCLddKzw" loading="lazy" allowfullscreen title="YouTube work 1"></iframe></div><div class="video-meta"><strong>YouTube Project 01</strong><span>Editing · Storytelling</span></div></article>
+        <article class="video-card" data-category="youtube"><div class="video-frame"><iframe src="https://www.youtube.com/embed/INkpWwGQVqc" loading="lazy" allowfullscreen title="YouTube work 2"></iframe></div><div class="video-meta"><strong>YouTube Project 02</strong><span>Editing · Graphics</span></div></article>
+        <article class="video-card" data-category="youtube"><div class="video-frame"><iframe src="https://www.youtube.com/embed/xmSGtoT_mpM" loading="lazy" allowfullscreen title="YouTube work 3"></iframe></div><div class="video-meta"><strong>YouTube Project 03</strong><span>Editing · Long-form</span></div></article>
+        <article class="video-card" data-category="youtube"><div class="video-frame"><iframe src="https://drive.google.com/file/d/1IeuVbut59Ot0t-6W1uzOmsqIPJmxqWr0/preview" loading="lazy" allowfullscreen title="Long-form work 4"></iframe></div><div class="video-meta"><strong>Long-form Project 04</strong><span>Post Production · Drive Preview</span></div></article>
+        <article class="video-card" data-category="youtube"><div class="video-frame"><iframe src="https://drive.google.com/file/d/1ArfyXSZOIGMTf3Fl-D0Mg3U_Wq9DQiha/preview" loading="lazy" allowfullscreen title="Long-form work 5"></iframe></div><div class="video-meta"><strong>Long-form Project 05</strong><span>Post Production · Drive Preview</span></div></article>
+        <article class="video-card" data-category="youtube"><div class="video-frame"><iframe src="https://drive.google.com/file/d/1O5K-dWw8Dk1iCz5VnhDpoporRwpUn2G8/preview" loading="lazy" allowfullscreen title="Long-form work 6"></iframe></div><div class="video-meta"><strong>Long-form Project 06</strong><span>Post Production · Drive Preview</span></div></article>
+      </div>
+      <div style="text-align:center;margin-top:20px"><a class="btn" href="https://drive.google.com/drive/folders/19IOL5jspgsPImomRC1mdSiCic5oX4vcw?usp=drive_link" target="_blank" rel="noopener">عرض Drive Portfolio كامل</a></div>
+    </div>
+  </section>
 
-        const text = `شاهد هذا العمل: ${title}`;
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-title"><div><span class="kicker">Experience</span><h2>الخبرة المهنية</h2></div><p>أبرز التجارب المهنية في التصميم والمونتاج وإدارة إنتاج الفيديو.</p></div>
+      <div class="experience-grid">
+        <article class="job"><time>2025–2026</time><div><h3>EHUNT</h3><div class="role">Video Editor · Remote</div><p>Advertisements, product videos, corporate content and high-volume post-production.</p></div></article>
+        <article class="job"><time>2026</time><div><h3>Next Update</h3><div class="role">Graphic Designer · Video Editor</div><p>Ads, Reels, product presentations and corporate marketing content.</p></div></article>
+        <article class="job"><time>2025</time><div><h3>Smarketing Agency</h3><div class="role">Motion Graphics Designer · Video Editor</div><p>Motion Graphics and campaign content for digital advertising.</p></div></article>
+        <article class="job"><time>2024</time><div><h3>Nextera</h3><div class="role">Graphic Designer · Motion Graphics · Video Editor</div><p>Marketing visuals, motion graphics and edited content aligned with campaigns.</p></div></article>
+        <article class="job"><time>2023</time><div><h3>Rawaj</h3><div class="role">Graphic Designer · Motion Graphics · Video Editor</div><p>Social media design, marketing visuals and promotional video content.</p></div></article>
+        <article class="job"><time>2018–2020</time><div><h3>TPS</h3><div class="role">Graphic Designer · Motion Graphics · Video Editor</div><p>50+ design and video projects including automotive marketing content.</p></div></article>
+      </div>
+    </div>
+  </section>
 
-        if (navigator.share) {
-          try {
-            await navigator.share({ title, text, url });
-          } catch (err) {
-            // المستخدم ربما أغلق المشاركة، لا حاجة لرسالة خطأ
-          }
-        } else {
-          const ok = await copyToClipboard(url);
-          if (ok) {
-            showToast('تم نسخ رابط العمل، يمكنك الآن لصقه وإرساله.', 'success');
-          } else {
-            showToast('لم يتمكن المتصفح من نسخ الرابط تلقائيًا. جرّب نسخ الرابط من شريط العنوان.', 'error');
-          }
-        }
-      });
-    });
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-title"><div><span class="kicker">About</span><h2>تصميم واضح. محتوى له هدف.</h2></div><p>التركيز الأساسي هو توصيل الرسالة بطريقة مرتبة ومناسبة للبراند والمنصة.</p></div>
+      <div class="about-grid">
+        <article class="about-card"><h3>About Me</h3><p>Graphic Designer وVideo Editor بخبرة أكثر من 5 سنوات مع شركات تسويق ووكالات إعلان وعملاء عن بُعد ومشروعات Freelance. أتخصص في Social Media Design، Video Editing وPrint Design.</p><div class="chips"><span class="chip">Remote</span><span class="chip">Freelance</span><span class="chip">Part-Time</span><span class="chip">Egypt</span><span class="chip">Gulf Region</span><span class="chip">International</span></div></article>
+        <article class="about-card"><h3>Core Software</h3><p>الأدوات الأساسية المستخدمة في التصميم والمونتاج والموشن.</p><div class="software"><div class="soft"><b>Ps</b><span>Photoshop</span></div><div class="soft"><b>Ai</b><span>Illustrator</span></div><div class="soft"><b>Pr</b><span>Premiere Pro</span></div><div class="soft"><b>Ae</b><span>After Effects</span></div><div class="soft"><b>Cc</b><span>CapCut</span></div><div class="soft"><b>AI</b><span>ChatGPT</span></div></div></article>
+      </div>
+    </div>
+  </section>
 
-    // زر مشاركة الموقع كاملًا
-    const shareSiteBtn = document.getElementById('share-site-btn');
+  <section class="section" id="contact">
+    <div class="container contact-box">
+      <div class="contact-copy">
+        <span class="kicker">Let's Work Together</span>
+        <h2>هل لديك مشروع؟<br>خلّينا نبدأ.</h2>
+        <p>أرسل Brief سريع عن نوع المحتوى والمنصة والمدة، وسيتم تجهيز رسالة واتساب تلقائيًا.</p>
+        <div class="contact-list">
+          <a class="contact-item" href="https://wa.me/201111687422" target="_blank" rel="noopener"><span class="contact-icon" aria-label="WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.275.623 4.395 1.71 6.233L4 29l7.01-1.84A11.9 11.9 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3m0 2.4c5.302 0 9.6 4.298 9.6 9.6 0 5.303-4.298 9.6-9.6 9.6-1.95 0-3.768-.588-5.326-1.7l-.38-.258-4.153 1.09 1.11-4.048-.248-.416A9.52 9.52 0 0 1 6.4 15c0-5.302 4.298-9.6 9.6-9.6"/></svg></span><b dir="ltr">+20 111 168 7422</b></a>
+          <a class="contact-item" href="mailto:mohamedsayedmohamed@yahoo.com"><span class="contact-icon" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4.5 7.5 7.5 6 7.5-6"/></svg></span><b>mohamedsayedmohamed@yahoo.com</b></a>
+          <a class="contact-item" href="https://www.instagram.com/mohamedsayed5156" target="_blank" rel="noopener"><span class="contact-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/></svg></span><b>@mohamedsayed5156</b></a>
+        </div>
+      </div>
 
-    if (shareSiteBtn) {
-      shareSiteBtn.addEventListener('click', async () => {
-        const url = window.location.href;
-        const title = 'بورتفوليو محمد سيد';
-        const text = 'شاهد بورتفوليو المونتاج الخاص بي وتواصل معي عبر الواتساب.';
+      <form id="contactForm">
+        <div class="form-grid"><div><label for="name">الاسم</label><input id="name" name="name" placeholder="اسمك أو اسم الشركة"></div><div><label for="service">الخدمة</label><select id="service" name="service"><option value="">اختر الخدمة</option><option>Social Media Design</option><option>Video Editing</option><option>Motion Graphics</option><option>Print Design</option></select></div></div>
+        <div class="form-grid"><div><label for="platform">المنصة</label><select id="platform" name="platform"><option value="">اختر المنصة</option><option>Instagram / Reels</option><option>TikTok / Shorts</option><option>YouTube</option><option>Facebook</option><option>Advertising Campaign</option><option>Other</option></select></div><div><label for="deadline">Deadline</label><input id="deadline" name="deadline" placeholder="مثال: خلال 3 أيام"></div></div>
+        <div><label for="reference">Reference Link — اختياري</label><input id="reference" name="reference" type="url" placeholder="https://..." dir="ltr"></div>
+        <div><label for="details">تفاصيل المشروع</label><textarea id="details" name="details" placeholder="نوع الفيديو أو التصميم، المدة/العدد، المطلوب تنفيذه، وأي ملاحظات مهمة..."></textarea></div>
+        <button class="btn primary" type="submit">إرسال الـBrief على واتساب</button>
+        <p class="form-note">النموذج لا يرسل البيانات إلى خادم؛ هو فقط يجهز رسالة واتساب.</p>
+      </form>
+    </div>
+  </section>
+</main>
 
-        if (navigator.share) {
-          try {
-            await navigator.share({ title, text, url });
-          } catch (err) {
-            // المستخدم ربما أغلق نافذة المشاركة
-          }
-        } else {
-          const ok = await copyToClipboard(url);
-          if (ok) {
-            showToast('تم نسخ رابط الموقع، يمكنك الآن لصقه ومشاركته.', 'success');
-          } else {
-            showToast('لم يتمكن المتصفح من نسخ الرابط تلقائيًا. انسخ الرابط من شريط العنوان.', 'error');
-          }
-        }
-      });
-    }
+<footer>
+  <div class="container footer-row">
+    <span>© <span id="year"></span> Mohamed Sayed · Graphic Designer & Video Editor</span>
+    <div class="socials">
+      <a class="social-link" href="mailto:mohamedsayedmohamed@yahoo.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4.5 7.5 7.5 6 7.5-6"/></svg></a>
+      <a class="social-link" href="https://www.instagram.com/mohamedsayed5156" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/></svg></a>
+      <a class="social-link" href="https://wa.me/201111687422" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.275.623 4.395 1.71 6.233L4 29l7.01-1.84A11.9 11.9 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3m0 2.4c5.302 0 9.6 4.298 9.6 9.6 0 5.303-4.298 9.6-9.6 9.6-1.95 0-3.768-.588-5.326-1.7l-.38-.258-4.153 1.09 1.11-4.048-.248-.416A9.52 9.52 0 0 1 6.4 15c0-5.302 4.298-9.6 9.6-9.6"/></svg></a>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast">تم نسخ رابط الموقع</div>
 
-    // فلترة الأعمال حسب النوع
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    filterButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const filter = button.getAttribute('data-filter');
 
-        // تحديث مظهر الأزرار
-        filterButtons.forEach((btn) => {
-          btn.classList.remove('bg-neutral-900', 'text-neutral-50', 'border-neutral-700');
-          btn.classList.add('border-neutral-800', 'text-neutral-300');
-        });
-        button.classList.remove('border-neutral-800', 'text-neutral-300');
-        button.classList.add('bg-neutral-900', 'text-neutral-50', 'border-neutral-700');
+  const menuBtn=document.getElementById('menuBtn');
+  const mobileMenu=document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('open'));
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
 
-        // إظهار/إخفاء البطاقات
-        projectCards.forEach((card) => {
-          const category = card.getAttribute('data-category');
-          const shouldShow = filter === 'all' || filter === category;
-          card.classList.toggle('hidden', !shouldShow);
-        });
-      });
-    });
+  const filters=document.querySelectorAll('.filter');
+  const videos=document.querySelectorAll('.video-card');
+  filters.forEach(btn=>btn.addEventListener('click',()=>{
+    filters.forEach(x=>x.classList.remove('active'));btn.classList.add('active');
+    const f=btn.dataset.filter;
+    videos.forEach(v=>v.classList.toggle('hidden',f!=='all'&&v.dataset.category!==f));
+  }));
 
-    // إرسال نموذج التواصل وتحويله لرسالة واتساب
-    const contactForm = document.getElementById('contact-form');
+  const toast=document.getElementById('toast');
+  function showToast(text){toast.textContent=text;toast.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>toast.classList.remove('show'),2200);}
+  document.getElementById('shareSite').addEventListener('click',async()=>{
+    const data={title:document.title,text:'Mohamed Sayed — Graphic Designer & Video Editor',url:location.href};
+    if(navigator.share){try{await navigator.share(data)}catch(e){}}
+    else{try{await navigator.clipboard.writeText(location.href);showToast('تم نسخ رابط الموقع')}catch(e){showToast('انسخ الرابط من شريط العنوان')}}
+  });
 
-    if (contactForm) {
-      contactForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const name = contactForm.name.value.trim();
-        const platform = contactForm.platform.value;
-        const details = contactForm.details.value.trim();
-
-        const platformLabelMap = {
-          reels: 'Reels / TikTok / Shorts',
-          youtube: 'YouTube',
-          ads: 'إعلانات ممولة',
-          other: 'منصات أخرى',
-        };
-
-        const platformLabel = platform ? platformLabelMap[platform] || platform : 'لم يتم التحديد';
-
-        let message = 'مرحبًا، أريد طلب خدمة مونتاج فيديو.';
-        if (name) {
-          message += `\n\nالاسم: ${name}`;
-        }
-        message += `\nالمنصّة المستهدفة: ${platformLabel}`;
-        if (details) {
-          message += `\n\nتفاصيل الفيديو:\n${details}`;
-        }
-
-        const encoded = encodeURIComponent(message);
-        const whatsappNumber = '201111687422'; // عدّل الرقم هنا إن أحببت
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encoded}`;
-        window.open(whatsappUrl, '_blank');
-      });
-    }
-  </script>
+  document.getElementById('contactForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const f=e.currentTarget;
+    const name=f.name.value.trim();
+    const service=f.service.value;
+    const platform=f.platform.value;
+    const deadline=f.deadline.value.trim();
+    const reference=f.reference.value.trim();
+    const details=f.details.value.trim();
+    let msg='مرحبًا محمد، أريد مناقشة مشروع جديد.';
+    if(name) msg+=`\n\nالاسم / الشركة: ${name}`;
+    if(service) msg+=`\nالخدمة: ${service}`;
+    if(platform) msg+=`\nالمنصة: ${platform}`;
+    if(deadline) msg+=`\nDeadline: ${deadline}`;
+    if(reference) msg+=`\nReference: ${reference}`;
+    if(details) msg+=`\n\nتفاصيل المشروع:\n${details}`;
+    window.open(`https://wa.me/201111687422?text=${encodeURIComponent(msg)}`,'_blank');
+  });
+</script>
 </body>
 </html>
